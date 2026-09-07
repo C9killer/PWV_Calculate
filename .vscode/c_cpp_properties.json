@@ -1,0 +1,93 @@
+{
+    "configurations":  [
+                           {
+                               "name":  "ESP-IDF",
+                               "compilerPath":  "C:\\Espressif\\tools\\xtensa-esp-elf\\esp-15.2.0_20251204\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe",
+                               "compileCommands":  "${workspaceFolder}/build/compile_commands.json",
+                               "intelliSenseMode":  "gcc-x86",
+                               "includePath":  [
+                                                   "E:/PWV/Project/PWV_Calculate/build/config",
+                                                   "E:/PWV/Project/PWV_Calculate/components/hardware",
+                                                   "E:/PWV/Project/PWV_Calculate/components/hardware/LED",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_libc/platform_include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/freertos/config/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/freertos/config/include/freertos",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/freertos/config/xtensa/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/freertos/esp_additions/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/include/soc",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/ldo/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/debug_probe/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/etm/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/mspi/mspi_timing_tuning/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/mspi/mspi_timing_tuning/tuning_scheme_impl/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/mspi/mspi_intr/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/power_supply/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/modem/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/include/soc/esp32s3",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/port/esp32s3/.",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/port/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/mspi/mspi_timing_tuning/port/esp32s3/.",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hw_support/mspi/mspi_timing_tuning/port/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/heap/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/heap/tlsf",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/log/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/soc/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/soc/esp32s3",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/soc/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/soc/esp32s3/register",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/hal/platform_port/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/hal/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/hal/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_rom/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_rom/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_rom/esp32s3/include/esp32s3",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_rom/esp32s3",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_common/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_system/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_system/port/soc",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_system/port/include/private",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_stdio/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/xtensa/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/xtensa/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/xtensa/deprecated_include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_gpio/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_gpio/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_usb/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_usb/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_pmu/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_pmu/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_regi2c/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_regi2c/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_uart/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_uart/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_ana_conv/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_ana_conv/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_dma/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_hal_dma/esp32s3/include",
+                                                   "D:/ESP/.espressif/v6.1/esp-idf/components/esp_driver_gpio/include"
+                                               ],
+                               "browse":  {
+                                              "path":  [
+                                                           "${workspaceFolder}"
+                                                       ],
+                                              "limitSymbolsToIncludedHeaders":  true
+                                          },
+                               "defines":  [
+                                               "ESP_PLATFORM"
+                                           ],
+                               "cStandard":  "c23",
+                               "cppStandard":  "c++23",
+                               "forcedInclude":  [
+                                                     "${workspaceFolder}/build/config/sdkconfig.h"
+                                                 ],
+                               "compilerArgs":  [
+                                                    "-specs=${workspaceFolder}/build/specs/picolibc.specs"
+                                                ]
+                           }
+                       ],
+    "version":  4
+}
