@@ -13,19 +13,28 @@
 #include "esp_flash.h"
 #include "esp_system.h"
 #include "LED.h"
+#include "PWR.h"
+#include "ACQ.h"
+#include "esp_log.h"
 
 void app_main(void)
 {
     printf("Hello world!\n");
+    esp_err_t err = PWR_Init();
+    if (err != ESP_OK) {
+        /* Stop peripheral startup without entering a reset loop via ESP32 EN. */
+        ESP_LOGE("main", "Power initialization failed: %s", esp_err_to_name(err));
+        return;
+    }
     LED_Init();
 
-    while (1)
-    {
-        /* code */
-        LED_TOGGLE();
-        printf("led toggle\r\n");
-        vTaskDelay(pdMS_TO_TICKS(500));
+    err = ACQ_Start();
+    if (err != ESP_OK) {
+        ESP_LOGE("main", "Acquisition startup failed: %s", esp_err_to_name(err));
+        return;
     }
+
+    /* ACQ owns SPI and prints samples from its worker tasks. */
     
     // /* Print chip information */
     // esp_chip_info_t chip_info;

@@ -24,6 +24,6 @@ idf_component_register(
     INCLUDE_DIRS ${hardware_include_dirs}
     # Add ESP-IDF dependencies here as drivers are implemented, for example:
     # REQUIRES esp_driver_gpio esp_driver_spi esp_driver_i2c
-    REQUIRES esp_driver_gpio
+    REQUIRES esp_driver_gpio esp_driver_i2c esp_driver_spi
     PRIV_REQUIRES espressif__led_strip
 )
