@@ -36,6 +36,7 @@ void app_main(void)
     LED_Init();
     wifi_scan();
 
+    
     while (1)
     {
         /* code */
@@ -43,6 +44,7 @@ void app_main(void)
         vTaskDelay(500);
     }
 
+    /* 用于PWV的采集 不要动这些注释的部分*/
     // esp_err_t err = PWR_Init();
     // if (err != ESP_OK) {
     //     /* Stop peripheral startup without entering a reset loop via ESP32 EN. */
