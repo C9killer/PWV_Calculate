@@ -35,8 +35,9 @@ static void printer(void *arg)
     print_sample_t sample;
     for (;;) {
         if (xQueueReceive(print_queue, &sample, portMAX_DELAY) == pdTRUE) {
-            /* One signed AIN0 raw code per line; UART blocking stays here. */
-            printf("%" PRId32 "\n", sample.channel[1]);
+            /* One synchronous AIN0..2 frame per line; UART blocking stays here. */
+            printf("%" PRId32 ",%" PRId32 ",%" PRId32 "\n",
+                   sample.channel[0], sample.channel[1], sample.channel[2]);
         }
     }
 }

@@ -18,7 +18,7 @@
 #include "ACQ.h"
 #include "wifi.h"
 #include "nvs_flash.h"      
-#include "esp_log.h"
+#include "esp_log.h"   
 
 void app_main(void)
 {
@@ -33,30 +33,30 @@ void app_main(void)
 
     printf("Hello world!\n");
     
-    LED_Init();
-    wifi_scan();
+    // LED_Init();
+    wifi_init_softap();
 
     
-    while (1)
-    {
-        /* code */
-        LED_Toggle();
-        vTaskDelay(500);
-    }
+    // while (1)
+    // {
+    //     /* code */
+    //     LED_Toggle();
+    //     vTaskDelay(500);
+    // }
 
     /* 用于PWV的采集 不要动这些注释的部分*/
-    // esp_err_t err = PWR_Init();
-    // if (err != ESP_OK) {
-    //     /* Stop peripheral startup without entering a reset loop via ESP32 EN. */
-    //     ESP_LOGE("main", "Power initialization failed: %s", esp_err_to_name(err));
-    //     return;
-    // }
+    esp_err_t err = PWR_Init();
+    if (err != ESP_OK) {
+        /* Stop peripheral startup without entering a reset loop via ESP32 EN. */
+        ESP_LOGE("main", "Power initialization failed: %s", esp_err_to_name(err));
+        return;
+    }
 
-    // err = ACQ_Start();
-    // if (err != ESP_OK) {
-    //     ESP_LOGE("main", "Acquisition startup failed: %s", esp_err_to_name(err));
-    //     return;
-    // }
+    err = ACQ_Start();
+    if (err != ESP_OK) {
+        ESP_LOGE("main", "Acquisition startup failed: %s", esp_err_to_name(err));
+        return;
+    }
 
     /* ACQ owns SPI and prints samples from its worker tasks. */
     
