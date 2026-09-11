@@ -22,5 +22,5 @@ list(REMOVE_DUPLICATES software_include_dirs)
 idf_component_register(
     SRCS ${software_srcs}
     INCLUDE_DIRS ${software_include_dirs}
-    REQUIRES hardware esp_wifi esp_event esp_netif
+    REQUIRES hardware esp_wifi esp_event esp_netif lwip
 )

@@ -2,11 +2,16 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 #include "esp_log.h"
 #include "esp_event.h"
 #include "esp_netif.h"
+#include "lwip/inet.h"
+#include "lwip/sockets.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
+#include "freertos/queue.h"
+#include "freertos/task.h"
 
 void wifi_scan(void)
 {
@@ -214,6 +219,117 @@ void wifi_sta_init(void)
 #define MAC2STR(a) (a)[0], (a)[1], (a)[2], (a)[3], (a)[4], (a)[5]
 #define MACSTR "%02x:%02x:%02x:%02x:%02x:%02x"
 
+#define WIFI_TX_QUEUE_LENGTH 64
+#define WIFI_TX_MESSAGE_SIZE 48
+
+typedef struct {
+    size_t length;
+    char data[WIFI_TX_MESSAGE_SIZE];
+} wifi_tx_message_t;
+
+static QueueHandle_t wifi_tx_queue;
+static volatile bool wifi_tcp_client_connected;
+
+esp_err_t wifi_send_data(const char *data, size_t length)
+{
+    if (data == NULL || length == 0 || length > WIFI_TX_MESSAGE_SIZE) {
+        return ESP_ERR_INVALID_ARG;
+    }
+    if (wifi_tx_queue == NULL || !wifi_tcp_client_connected) {
+        return ESP_ERR_INVALID_STATE;
+    }
+
+    wifi_tx_message_t message = {.length = length};
+    memcpy(message.data, data, length);
+    return xQueueSend(wifi_tx_queue, &message, 0) == pdTRUE
+               ? ESP_OK
+               : ESP_ERR_TIMEOUT;
+}
+
+static bool tcp_send_all(int socket_fd, const char *data, size_t length)
+{
+    size_t sent = 0;
+    while (sent < length) {
+        int result = send(socket_fd, data + sent, length - sent, 0);
+        if (result <= 0) {
+            return false;
+        }
+        sent += (size_t)result;
+    }
+    return true;
+}
+
+static void wifi_tcp_server(void *arg)
+{
+    static const char *TAG = "wifi_tcp";
+    struct sockaddr_in server_address = {
+        .sin_family = AF_INET,
+        .sin_port = htons(WIFI_DATA_PORT),
+        .sin_addr.s_addr = htonl(INADDR_ANY),
+    };
+
+    int listen_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_IP);
+    if (listen_socket < 0) {
+        ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
+        vTaskDelete(NULL);
+        return;
+    }
+
+    int reuse_address = 1;
+    setsockopt(listen_socket, SOL_SOCKET, SO_REUSEADDR,
+               &reuse_address, sizeof(reuse_address));
+    if (bind(listen_socket, (struct sockaddr *)&server_address,
+             sizeof(server_address)) != 0) {
+        ESP_LOGE(TAG, "Socket bind failed: errno %d", errno);
+        close(listen_socket);
+        vTaskDelete(NULL);
+        return;
+    }
+    if (listen(listen_socket, 1) != 0) {
+        ESP_LOGE(TAG, "Socket listen failed: errno %d", errno);
+        close(listen_socket);
+        vTaskDelete(NULL);
+        return;
+    }
+
+    ESP_LOGI(TAG, "ADC TCP server listening on 192.168.4.1:%d",
+             WIFI_DATA_PORT);
+
+    for (;;) {
+        struct sockaddr_in client_address;
+        socklen_t address_length = sizeof(client_address);
+        int client_socket = accept(listen_socket,
+                                   (struct sockaddr *)&client_address,
+                                   &address_length);
+        if (client_socket < 0) {
+            ESP_LOGE(TAG, "Socket accept failed: errno %d", errno);
+            continue;
+        }
+
+        struct timeval send_timeout = {.tv_sec = 1, .tv_usec = 0};
+        setsockopt(client_socket, SOL_SOCKET, SO_SNDTIMEO,
+                   &send_timeout, sizeof(send_timeout));
+        xQueueReset(wifi_tx_queue);
+        wifi_tcp_client_connected = true;
+        ESP_LOGI(TAG, "Client connected: %s",
+                 inet_ntoa(client_address.sin_addr));
+
+        wifi_tx_message_t message;
+        while (xQueueReceive(wifi_tx_queue, &message, portMAX_DELAY) == pdTRUE) {
+            if (!tcp_send_all(client_socket, message.data, message.length)) {
+                ESP_LOGW(TAG, "Client send failed or disconnected: errno %d",
+                         errno);
+                break;
+            }
+        }
+
+        wifi_tcp_client_connected = false;
+        shutdown(client_socket, SHUT_RDWR);
+        close(client_socket);
+        ESP_LOGI(TAG, "Waiting for a new TCP client");
+    }
+}
+
 //wifi热点回调函数
 static void wifi_ap_event_handler(void *arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
 {
@@ -285,4 +401,16 @@ void wifi_init_softap(void)//初始化esp为热点
     ESP_ERROR_CHECK(esp_wifi_get_mac(WIFI_IF_AP, ap_mac));
     ESP_LOGI(TAG, "SoftAP started, SSID=%s, MAC=" MACSTR,
              ESP_WIFI_SSID, MAC2STR(ap_mac));
+
+    wifi_tx_queue = xQueueCreate(WIFI_TX_QUEUE_LENGTH,
+                                 sizeof(wifi_tx_message_t));
+    if (wifi_tx_queue == NULL) {
+        ESP_LOGE(TAG, "Failed to create Wi-Fi transmit queue");
+        return;
+    }
+    if (xTaskCreate(wifi_tcp_server, "wifi_tcp", 4096, NULL, 5, NULL) != pdPASS) {
+        ESP_LOGE(TAG, "Failed to create Wi-Fi TCP server task");
+        vQueueDelete(wifi_tx_queue);
+        wifi_tx_queue = NULL;
+    }
 }

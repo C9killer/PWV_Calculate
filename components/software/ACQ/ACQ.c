@@ -3,7 +3,9 @@
 #include <inttypes.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #include "ADS131.h"
+#include "wifi.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
@@ -33,11 +35,19 @@ static void drdy_isr(void *arg)
 static void printer(void *arg)
 {
     print_sample_t sample;
+    char line[48];
     for (;;) {
         if (xQueueReceive(print_queue, &sample, portMAX_DELAY) == pdTRUE) {
-            /* One synchronous AIN0..2 frame per line; UART blocking stays here. */
-            printf("%" PRId32 ",%" PRId32 ",%" PRId32 "\n",
-                   sample.channel[0], sample.channel[1], sample.channel[2]);
+            /* Send the same synchronous AIN0..2 CSV frame over UART and Wi-Fi. */
+            int length = snprintf(line, sizeof(line),
+                                  "%" PRId32 ",%" PRId32 ",%" PRId32 "\n",
+                                  sample.channel[0], sample.channel[1],
+                                  sample.channel[2]);
+            if (length > 0 && (size_t)length < sizeof(line)) {
+                fwrite(line, 1, (size_t)length, stdout);
+                /* A disconnected or slow client must never block acquisition. */
+                wifi_send_data(line, (size_t)length);
+            }
         }
     }
 }
