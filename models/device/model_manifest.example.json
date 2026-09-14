@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "model_type": "xgboost-or-lightgbm",
+  "model_version": 0,
+  "feature_count": 0,
+  "feature_schema_crc32": "00000000",
+  "tree_count": 0,
+  "binary_file": "model.bin",
+  "binary_size": 0,
+  "binary_crc32": "00000000"
+}
+

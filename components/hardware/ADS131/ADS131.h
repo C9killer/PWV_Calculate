@@ -24,7 +24,7 @@ typedef struct {
     int32_t channel[3]; /* Signed 24-bit codes, AIN0..2 from the same frame. */
 } ADS131_Sample;
 
-/* Configure 4.096 MHz CLKIN / 2 / 8192 = 250 samples/s, gain=1.
+/* Configure 4.096 MHz CLKIN / 2 / 4096 = 500 samples/s, gain=1.
  * Continuous conversion, equal channel phase, CH0..2 enabled, CH3 disabled.
  * After configuration, only the acquisition task may access the ADC.
  */

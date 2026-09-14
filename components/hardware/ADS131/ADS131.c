@@ -144,7 +144,7 @@ esp_err_t ADS131_ConfigureAcquisition(void)
         return ESP_ERR_INVALID_RESPONSE;
     }
     /* UNLOCK; preserve 24-bit framing, restore acquisition settings explicitly.
-     * CLOCK 0x0019: channels off, OSR=8192, LP mode for 4.096 MHz.
+     * CLOCK 0x0015: channels off, OSR=4096, LP mode for 4.096 MHz.
      * MODE 0x0110: CCITT CRC, RX CRC off, 24 bits, DRDY active-low level,
      * push-pull, most-lagging enabled channel, clear RESET indication.
      * MUX=00 selects external AINxP-AINxN. N-to-ground is board wiring.
@@ -154,9 +154,9 @@ esp_err_t ADS131_ConfigureAcquisition(void)
         return err;
     }
     static const struct { uint8_t address; uint16_t value; } config[] = {
-        {0x03, 0x0019}, {0x02, 0x0110}, {0x04, 0x0000},
+        {0x03, 0x0015}, {0x02, 0x0110}, {0x04, 0x0000},
         {0x06, 0x0600}, {0x09, 0x0000}, {0x0E, 0x0000},
-        {0x13, 0x0000}, {0x03, 0x0719},
+        {0x13, 0x0000}, {0x03, 0x0715},
     };
     for (size_t i = 0; i < sizeof(config) / sizeof(config[0]); ++i) {
         err = write_checked(config[i].address, config[i].value);
@@ -164,7 +164,7 @@ esp_err_t ADS131_ConfigureAcquisition(void)
             return err;
         }
     }
-    ESP_LOGI(TAG, "AIN0..2 synchronous: CLKIN=4096000 Hz, OSR=8192, 250 SPS, gain=1");
+    ESP_LOGI(TAG, "AIN0..2 synchronous: CLKIN=4096000 Hz, OSR=4096, 500 SPS, gain=1");
     return ESP_OK;
 }
 

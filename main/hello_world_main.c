@@ -19,6 +19,8 @@
 #include "wifi.h"
 #include "nvs_flash.h"      
 #include "esp_log.h"   
+#include "W25Q64.h"
+#include "ModelStorage.h"
 
 void app_main(void)
 {
@@ -32,7 +34,8 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     printf("Hello world!\n");
-    
+    W25Q64_Init();
+    ESP_ERROR_CHECK(ModelStorage_Init());
     // LED_Init();
     wifi_init_softap();
 

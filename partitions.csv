@@ -1,0 +1,9 @@
+# ESP32-S3-N16R8 internal 16 MiB Flash layout.
+# The independent W25Q64 on SPI3 is not part of this partition table.
+# Name,       Type, SubType, Offset,   Size,      Flags
+nvs,          data, nvs,     0x9000,   0x6000,
+phy_init,     data, phy,     0xF000,   0x1000,
+factory,      app,  factory, 0x10000,  0x200000,
+xgbmodel,     data, 0x40,    0x210000, 0xC00000,
+calibration,  data, 0x41,    0xE10000, 0x40000,
+reserved,     data, 0x42,    0xE50000, 0x1B0000,

@@ -10,14 +10,14 @@ checks ID=0x24xx, and writes/verifies these registers:
 
 | Register | Value | Meaning |
 | --- | --- | --- |
-| CLOCK (0x03) | 0x0719 | CH0..2 enabled, CH3 disabled, OSR=8192, low-power mode |
+| CLOCK (0x03) | 0x0715 | CH0..2 enabled, CH3 disabled, OSR=4096, low-power mode |
 | MODE (0x02) | 0x0110 | 24-bit words, CCITT CRC, DRDY active-low level, RESET cleared |
 | GAIN (0x04) | 0x0000 | Gain=1 for all channels |
 | CFG (0x06) | 0x0600 | Continuous conversion, global chop disabled |
 | CH0/1/2_CFG (0x09/0x0E/0x13) | 0x0000 | Equal zero phase, external P/N inputs |
 
-CLOCK is first set to 0x0019 to disable channels during configuration. The
-resulting per-channel rate is 4096000 / 2 / 8192 = 250 samples/s.
+CLOCK is first set to 0x0015 to disable channels during configuration. The
+resulting per-channel rate is 4096000 / 2 / 4096 = 500 samples/s.
 Pseudo-differential operation is physical wiring: AINxP receives the signal,
 AINxN connects to analog ground. Gain=1 differential full scale is +/-1.2 V;
 raw codes are signed 24-bit, nominal volts = code * 1.2 / 8388608.

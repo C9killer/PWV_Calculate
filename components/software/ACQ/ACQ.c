@@ -1,27 +1,34 @@
 #include "ACQ.h"
 
 #include <inttypes.h>
-#include <stdio.h>
 #include <stdbool.h>
-#include <string.h>
+#include <stdio.h>
 #include "ADS131.h"
 #include "wifi.h"
 #include "driver/gpio.h"
+#include "esp_heap_caps.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
 
+#define ACQ_WINDOW_BUFFER_COUNT 2U
+#define ACQ_STREAM_QUEUE_LENGTH 256U
+
 static const char *TAG = "ACQ";
 static TaskHandle_t acquisition_task;
-static TaskHandle_t print_task;
-static QueueHandle_t print_queue;
+static TaskHandle_t window_task;
+static TaskHandle_t stream_task;
+static QueueHandle_t free_window_queue;
+static QueueHandle_t ready_window_queue;
+static QueueHandle_t stream_queue;
+static ACQ_Window *window_storage[ACQ_WINDOW_BUFFER_COUNT];
 static bool started;
 
 typedef struct {
     uint32_t sequence;
     int32_t channel[3];
-} print_sample_t;
+} stream_sample_t;
 
 static void drdy_isr(void *arg)
 {
@@ -32,20 +39,38 @@ static void drdy_isr(void *arg)
     }
 }
 
-static void printer(void *arg)
+__attribute__((weak)) void ACQ_ProcessWindow(const ACQ_Window *window)
 {
-    print_sample_t sample;
+    (void)window;
+}
+
+static void process_windows(void *arg)
+{
+    ACQ_Window *window;
+    for (;;) {
+        if (xQueueReceive(ready_window_queue, &window, portMAX_DELAY) == pdTRUE) {
+            ACQ_ProcessWindow(window);
+            window->sample_count = 0;
+            xQueueSend(free_window_queue, &window, portMAX_DELAY);
+        }
+    }
+}
+
+static void stream_samples(void *arg)
+{
+    stream_sample_t sample;
     char line[48];
     for (;;) {
-        if (xQueueReceive(print_queue, &sample, portMAX_DELAY) == pdTRUE) {
-            /* Send the same synchronous AIN0..2 CSV frame over UART and Wi-Fi. */
+        if (xQueueReceive(stream_queue, &sample, portMAX_DELAY) == pdTRUE) {
             int length = snprintf(line, sizeof(line),
                                   "%" PRId32 ",%" PRId32 ",%" PRId32 "\n",
                                   sample.channel[0], sample.channel[1],
                                   sample.channel[2]);
             if (length > 0 && (size_t)length < sizeof(line)) {
+                /* This task may block on UART; acquisition only performs a
+                 * nonblocking queue copy and therefore keeps its 2 ms budget.
+                 */
                 fwrite(line, 1, (size_t)length, stdout);
-                /* A disconnected or slow client must never block acquisition. */
                 wifi_send_data(line, (size_t)length);
             }
         }
@@ -57,7 +82,9 @@ static void collect(void *arg)
     /* Start gate: GPIO handler and ADC configuration are ready before work. */
     ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
     uint32_t sequence = 0;
-    uint32_t read_errors = 0, queue_drops = 0, resyncs = 0;
+    uint32_t read_errors = 0, window_drops = 0, stream_drops = 0, resyncs = 0;
+    ACQ_Window *active_window = NULL;
+    xQueueReceive(free_window_queue, &active_window, 0);
     unsigned settling = 4;
     TickType_t last_report = xTaskGetTickCount();
     for (;;) {
@@ -74,6 +101,9 @@ static void collect(void *arg)
             ulTaskNotifyTake(pdTRUE, 0);
             gpio_intr_enable(ACQ_DRDY_PIN);
             settling = 4;
+            if (active_window != NULL) {
+                active_window->sample_count = 0;
+            }
             ++resyncs;
         } else {
             ADS131_Sample sample;
@@ -92,23 +122,56 @@ static void collect(void *arg)
                 ulTaskNotifyTake(pdTRUE, 0);
                 gpio_intr_enable(ACQ_DRDY_PIN);
                 settling = 4;
+                if (active_window != NULL) {
+                    active_window->sample_count = 0;
+                }
                 ++resyncs;
             } else {
-                const print_sample_t output = {
+                const stream_sample_t output = {
                     .sequence = sequence,
-                    .channel = {sample.channel[0], sample.channel[1], sample.channel[2]},
+                    .channel = {sample.channel[0], sample.channel[1],
+                                sample.channel[2]},
                 };
-                if (xQueueSend(print_queue, &output, 0) != pdTRUE) {
-                    ++queue_drops;
+                if (xQueueSend(stream_queue, &output, 0) != pdTRUE) {
+                    ++stream_drops;
+                }
+
+                if (active_window == NULL) {
+                    xQueueReceive(free_window_queue, &active_window, 0);
+                    if (active_window == NULL) {
+                        ++window_drops;
+                    }
+                }
+                if (active_window != NULL) {
+                    const size_t index = active_window->sample_count;
+                    if (index == 0) {
+                        active_window->first_sequence = sequence;
+                    }
+                    active_window->sample[index][0] = sample.channel[0];
+                    active_window->sample[index][1] = sample.channel[1];
+                    active_window->sample[index][2] = sample.channel[2];
+                    active_window->last_sequence = sequence;
+                    active_window->sample_count = index + 1;
+
+                    if (active_window->sample_count == ACQ_WINDOW_SAMPLE_COUNT) {
+                        if (xQueueSend(ready_window_queue, &active_window, 0) != pdTRUE) {
+                            active_window->sample_count = 0;
+                            xQueueSend(free_window_queue, &active_window, 0);
+                            ++window_drops;
+                        }
+                        active_window = NULL;
+                        xQueueReceive(free_window_queue, &active_window, 0);
+                    }
                 }
             }
         }
         if ((xTaskGetTickCount() - last_report) >= pdMS_TO_TICKS(1000)) {
-            if (read_errors || queue_drops || resyncs) {
+            if (read_errors || window_drops || stream_drops || resyncs) {
                 ESP_LOGW(TAG, "Last interval: read_errors=%" PRIu32
-                         " print_drops=%" PRIu32 " resyncs=%" PRIu32,
-                         read_errors, queue_drops, resyncs);
-                read_errors = queue_drops = resyncs = 0;
+                         " window_dropped_samples=%" PRIu32
+                         " stream_drops=%" PRIu32 " resyncs=%" PRIu32,
+                         read_errors, window_drops, stream_drops, resyncs);
+                read_errors = window_drops = stream_drops = resyncs = 0;
             }
             last_report = xTaskGetTickCount();
         }
@@ -143,11 +206,36 @@ esp_err_t ACQ_Start(void)
     if (err != ESP_OK && err != ESP_ERR_INVALID_STATE) {
         return err;
     }
-    print_queue = xQueueCreate(64, sizeof(print_sample_t));
-    if (print_queue == NULL) {
-        return ESP_ERR_NO_MEM;
+    free_window_queue = xQueueCreate(ACQ_WINDOW_BUFFER_COUNT,
+                                     sizeof(ACQ_Window *));
+    ready_window_queue = xQueueCreate(ACQ_WINDOW_BUFFER_COUNT,
+                                      sizeof(ACQ_Window *));
+    stream_queue = xQueueCreate(ACQ_STREAM_QUEUE_LENGTH,
+                                sizeof(stream_sample_t));
+    if (free_window_queue == NULL || ready_window_queue == NULL ||
+        stream_queue == NULL) {
+        err = ESP_ERR_NO_MEM;
+        goto fail;
     }
-    if (xTaskCreate(printer, "acq_print", 3072, NULL, 3, &print_task) != pdPASS) {
+    for (size_t i = 0; i < ACQ_WINDOW_BUFFER_COUNT; ++i) {
+        window_storage[i] = heap_caps_calloc(1, sizeof(ACQ_Window),
+                                             MALLOC_CAP_SPIRAM |
+                                             MALLOC_CAP_8BIT);
+        if (window_storage[i] == NULL) {
+            ESP_LOGE(TAG, "Unable to allocate five-second window %u in PSRAM",
+                     (unsigned)i);
+            err = ESP_ERR_NO_MEM;
+            goto fail;
+        }
+        xQueueSend(free_window_queue, &window_storage[i], 0);
+    }
+    if (xTaskCreate(process_windows, "acq_window", 8192, NULL, 4,
+                    &window_task) != pdPASS) {
+        err = ESP_ERR_NO_MEM;
+        goto fail;
+    }
+    if (xTaskCreate(stream_samples, "acq_stream", 4096, NULL, 3,
+                    &stream_task) != pdPASS) {
         err = ESP_ERR_NO_MEM;
         goto fail;
     }
@@ -174,8 +262,8 @@ esp_err_t ACQ_Start(void)
         goto fail_handler;
     }
     started = true;
-    ESP_LOGI(TAG, "Started %d Hz: AIN0..2, SYNC=GPIO%d, DRDY=GPIO%d falling edge",
-             ACQ_SAMPLE_RATE_HZ, ADS131_SYNC_PIN, ACQ_DRDY_PIN);
+    ESP_LOGI(TAG, "Started %d Hz: AIN0..2, %u samples/window, UART + Wi-Fi streaming",
+             ACQ_SAMPLE_RATE_HZ, (unsigned)ACQ_WINDOW_SAMPLE_COUNT);
     return ESP_OK;
 
 fail_handler:
@@ -186,11 +274,29 @@ fail:
         vTaskDelete(acquisition_task);
         acquisition_task = NULL;
     }
-    if (print_task != NULL) {
-        vTaskDelete(print_task);
-        print_task = NULL;
+    if (window_task != NULL) {
+        vTaskDelete(window_task);
+        window_task = NULL;
     }
-    vQueueDelete(print_queue);
-    print_queue = NULL;
+    if (stream_task != NULL) {
+        vTaskDelete(stream_task);
+        stream_task = NULL;
+    }
+    if (free_window_queue != NULL) {
+        vQueueDelete(free_window_queue);
+        free_window_queue = NULL;
+    }
+    if (ready_window_queue != NULL) {
+        vQueueDelete(ready_window_queue);
+        ready_window_queue = NULL;
+    }
+    if (stream_queue != NULL) {
+        vQueueDelete(stream_queue);
+        stream_queue = NULL;
+    }
+    for (size_t i = 0; i < ACQ_WINDOW_BUFFER_COUNT; ++i) {
+        heap_caps_free(window_storage[i]);
+        window_storage[i] = NULL;
+    }
     return err;
 }
