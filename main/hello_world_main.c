@@ -21,6 +21,10 @@
 #include "esp_log.h"   
 #include "W25Q64.h"
 #include "ModelStorage.h"
+#include "wk_edge_inference.h"
+
+/* Deliberately static: this 7.4 KiB inference state must not consume app_main's stack. */
+static wk_edge_state_t s_wk_models;
 
 void app_main(void)
 {
@@ -36,6 +40,14 @@ void app_main(void)
     printf("Hello world!\n");
     W25Q64_Init();
     ESP_ERROR_CHECK(ModelStorage_Init());
+    ret = wk_edge_state_init(&s_wk_models);
+    if (ret == ESP_ERR_INVALID_RESPONSE) {
+        ESP_LOGW("main", "WK model partition is empty/invalid; flash mimic_iii_wk_mk_f64.bin before inference");
+    } else if (ret != ESP_OK) {
+        ESP_LOGE("main", "WK model initialization failed: %s", esp_err_to_name(ret));
+    } else {
+        ESP_LOGI("main", "WK model runtime ready (185 compact features; flash-mapped on demand)");
+    }
     // LED_Init();
     wifi_init_softap();
 
@@ -55,11 +67,11 @@ void app_main(void)
         return;
     }
 
-    err = ACQ_Start();
-    if (err != ESP_OK) {
-        ESP_LOGE("main", "Acquisition startup failed: %s", esp_err_to_name(err));
-        return;
-    }
+    // err = ACQ_Start();
+    // if (err != ESP_OK) {
+    //     ESP_LOGE("main", "Acquisition startup failed: %s", esp_err_to_name(err));
+    //     return;
+    // }
 
     /* ACQ owns SPI and prints samples from its worker tasks. */
     
