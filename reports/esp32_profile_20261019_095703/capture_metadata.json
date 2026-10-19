@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-10-19T09:57:03.653805+08:00",
+  "ended_at": "2026-10-19T09:59:03.663568+08:00",
+  "capture_seconds": 120.00046539999312,
+  "port": "COM22",
+  "baud": 921600,
+  "raw_bytes": 972513,
+  "text_log_records": 612,
+  "reset_requested": false,
+  "firmware_flashed": false,
+  "initial_pending_bytes_discarded": true,
+  "input_condition_user_reported": "no_valid_physiological_signal",
+  "input_condition_reported_after_capture": true
+}

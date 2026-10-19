@@ -6,7 +6,7 @@
 #include "esp_err.h"
 
 #define ACQ_DRDY_PIN 7
-#define ACQ_SAMPLE_RATE_HZ 500
+#define ACQ_SAMPLE_RATE_HZ 250
 #define ACQ_WINDOW_SECONDS 5U
 #define ACQ_WINDOW_SAMPLE_COUNT (ACQ_SAMPLE_RATE_HZ * ACQ_WINDOW_SECONDS)
 
@@ -19,7 +19,7 @@ typedef struct {
 
 /* Start once from app_main after PWR_Init. Owns all subsequent ADC access.
  * SYNC/RESET=GPIO6 output; DRDY=GPIO7 falling-edge interrupt input.
- * Sends synchronous AIN0..2 CSV frames over UART and the Wi-Fi data service.
+ * Sends identical synchronous AIN0..2 binary frames over UART and Wi-Fi.
  */
 esp_err_t ACQ_Start(void);
 
@@ -29,5 +29,10 @@ esp_err_t ACQ_Start(void);
  * function returns; finish within five seconds to avoid losing a window.
  */
 void ACQ_ProcessWindow(const ACQ_Window *window);
+
+/* Called by the acquisition task for each synchronous AIN0..2 frame. The
+ * default weak implementation is empty; a real-time model may override it.
+ * It must return immediately and must not perform blocking I/O. */
+void ACQ_ProcessSample(const int32_t channels[3]);
 
 #endif

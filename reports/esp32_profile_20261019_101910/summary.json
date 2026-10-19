@@ -1,0 +1,276 @@
+{
+  "capture": {
+    "started_at": "2026-10-19T10:19:10.723766+08:00",
+    "ended_at": "2026-10-19T10:21:10.737258+08:00",
+    "capture_seconds": 120.00256989998161,
+    "port": "COM22",
+    "baud": 921600,
+    "raw_bytes": 975454,
+    "text_log_records": 628,
+    "reset_requested": false,
+    "firmware_flashed": false,
+    "initial_pending_bytes_discarded": true,
+    "input_condition_user_reported": "human_signal_connected"
+  },
+  "resources_from_initial_device_log": {
+    "model_flash_B": 9341904,
+    "partition_reserved_B": 12582912,
+    "pipeline_psram_B": 85032,
+    "edge_state_included_B": 7808,
+    "queue_payload_B": 16384,
+    "task_stack_reserved_B": 12288
+  },
+  "resource_source": "current_capture",
+  "startup_probe_source_path": "E:\\PWV\\Project\\PWV_Calculate\\reports\\esp32_profile_20261019_095703\\initial_probe_raw.bin",
+  "configured_cpu_mhz_not_independently_measured": 160,
+  "window_count": 120,
+  "status_statistics": {
+    "output_ready": {
+      "windows": 115,
+      "processing_ms": {
+        "count": 115,
+        "mean": 396.34765217391305,
+        "minimum": 354.814,
+        "median": 396.608,
+        "p95": 398.8449,
+        "maximum": 399.888
+      },
+      "last_sample_to_completion_ms": {
+        "count": 115,
+        "mean": 396.4343304347826,
+        "minimum": 354.899,
+        "median": 396.688,
+        "p95": 398.9275,
+        "maximum": 399.97
+      },
+      "queue_samples": {
+        "count": 115,
+        "mean": 98.67826086956522,
+        "minimum": 88,
+        "median": 99,
+        "p95": 99.0,
+        "maximum": 100
+      },
+      "calls_over_1s_observed": 0,
+      "firmware_lifetime_last_n": 115,
+      "firmware_lifetime_last_avg_us": 396347,
+      "firmware_lifetime_last_max_us": 399888,
+      "firmware_lifetime_last_over_hop": 0,
+      "counter_gaps": 0
+    },
+    "physiology_error": {
+      "windows": 2,
+      "processing_ms": {
+        "count": 2,
+        "mean": 359.53999999999996,
+        "minimum": 359.423,
+        "median": 359.53999999999996,
+        "p95": 359.64529999999996,
+        "maximum": 359.657
+      },
+      "last_sample_to_completion_ms": {
+        "count": 2,
+        "mean": 359.62199999999996,
+        "minimum": 359.505,
+        "median": 359.62199999999996,
+        "p95": 359.72729999999996,
+        "maximum": 359.739
+      },
+      "queue_samples": {
+        "count": 2,
+        "mean": 89,
+        "minimum": 89,
+        "median": 89.0,
+        "p95": 89.0,
+        "maximum": 89
+      },
+      "calls_over_1s_observed": 0,
+      "firmware_lifetime_last_n": 3,
+      "firmware_lifetime_last_avg_us": 351642,
+      "firmware_lifetime_last_max_us": 359657,
+      "firmware_lifetime_last_over_hop": 0,
+      "counter_gaps": 0
+    },
+    "signal_rejected": {
+      "windows": 3,
+      "processing_ms": {
+        "count": 3,
+        "mean": 30.753666666666668,
+        "minimum": 30.558,
+        "median": 30.667,
+        "p95": 30.999100000000002,
+        "maximum": 31.036
+      },
+      "last_sample_to_completion_ms": {
+        "count": 3,
+        "mean": 30.836333333333332,
+        "minimum": 30.643,
+        "median": 30.75,
+        "p95": 31.0794,
+        "maximum": 31.116
+      },
+      "queue_samples": {
+        "count": 3,
+        "mean": 7,
+        "minimum": 7,
+        "median": 7,
+        "p95": 7.0,
+        "maximum": 7
+      },
+      "calls_over_1s_observed": 0,
+      "firmware_lifetime_last_n": 4,
+      "firmware_lifetime_last_avg_us": 30747,
+      "firmware_lifetime_last_max_us": 31036,
+      "firmware_lifetime_last_over_hop": 0,
+      "counter_gaps": 0
+    }
+  },
+  "excluded_incomplete_profile_records": [],
+  "memory_bounds_bytes": {
+    "stack_peak_since_start_B": {
+      "records": 120,
+      "minimum": 3108,
+      "maximum": 3204
+    },
+    "stack_reserved_B": {
+      "records": 120,
+      "minimum": 12288,
+      "maximum": 12288
+    },
+    "internal_used_peak_bound_B": {
+      "records": 120,
+      "minimum": 206376,
+      "maximum": 207228
+    },
+    "psram_used_peak_bound_B": {
+      "records": 120,
+      "minimum": 120752,
+      "maximum": 120752
+    },
+    "internal_min_free_B": {
+      "records": 120,
+      "minimum": 195647,
+      "maximum": 196499
+    },
+    "psram_min_free_B": {
+      "records": 120,
+      "minimum": 8267856,
+      "maximum": 8267856
+    },
+    "internal_extra_peak_bound_B": {
+      "records": 120,
+      "minimum": 0,
+      "maximum": 852
+    },
+    "psram_extra_peak_bound_B": {
+      "records": 120,
+      "minimum": 28,
+      "maximum": 28
+    }
+  },
+  "known_reserved_payload_subtotal_B": 113704,
+  "sample_discontinuities": [],
+  "drop_warning_lines": [],
+  "restart_indicators_in_capture": [],
+  "rejections": {
+    "signal_rejected:irregular_rhythm": 3,
+    "physiology_error:ok": 2
+  },
+  "startup_resource_lines_in_capture": [
+    "I (884) WK_RT: RESOURCE model_flash_B=9341904 partition_reserved_B=12582912",
+    "I (885) WK_RT: RESOURCE pipeline_psram_B=85032 edge_state_included_B=7808 queue_payload_B=16384 task_stack_reserved_B=12288"
+  ],
+  "pipeline_errors": [
+    {
+      "source_line": 211,
+      "log": "E (44394) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 262,
+      "log": "E (54394) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    }
+  ],
+  "source_sha256": {
+    "serial_raw.bin": "fd8ef45029ebba7de1513c69d2172fbecb2838279e195f89566f9bb39e806064",
+    "initial_probe_raw.bin": "7a18ef9d9ffea92600e017591f2b368299f526780ecad60ffa6c347598937560"
+  },
+  "limitations": [
+    "Processing time includes snapshot, feature extraction, inference, physiological calculation and preemption; excludes prior hop filtering, logs and publication.",
+    "Latency is last submitted sample to computation completion, excluding five-second signal acquisition, ADC conversion and transmission.",
+    "Heap bounds are system-wide and include other tasks; static RAM outside heap and MMU/cache physical storage are not algorithm-exclusive allocations.",
+    "Resource metadata came from initially buffered startup logs; CPU frequency comes from sdkconfig, not independent on-device measurement.",
+    "No firmware flash/reset requested; this is not a controlled cold-start benchmark.",
+    "No isolated per-model timing, CPU utilization or electrical power was measured."
+  ],
+  "first_completed_window_ms": 354.814,
+  "subsequent_completed_windows_ms": {
+    "count": 114,
+    "mean": 396.71198245614033,
+    "minimum": 392.558,
+    "median": 396.63800000000003,
+    "p95": 398.84505,
+    "maximum": 399.888
+  },
+  "comparison": {
+    "previous_summary_path": "E:\\PWV\\Project\\PWV_Calculate\\reports\\esp32_profile_20261019_095703\\summary.json",
+    "previous_condition_user_reported": "no_valid_physiological_signal",
+    "current_condition_user_reported": "human_signal_connected",
+    "metrics": [
+      {
+        "metric": "完整窗口数",
+        "previous": 120,
+        "current": 120
+      },
+      {
+        "metric": "完成计算窗口数",
+        "previous": 70,
+        "current": 115
+      },
+      {
+        "metric": "信号拒绝窗口数",
+        "previous": 39,
+        "current": 3
+      },
+      {
+        "metric": "生理计算错误窗口数",
+        "previous": 11,
+        "current": 2
+      },
+      {
+        "metric": "模型错误窗口数",
+        "previous": 0,
+        "current": 0
+      },
+      {
+        "metric": "完成计算窗口平均耗时 ms",
+        "previous": 395.2630142857143,
+        "current": 396.34765217391305
+      },
+      {
+        "metric": "完成计算窗口 P95 耗时 ms",
+        "previous": 398.13965,
+        "current": 398.8449
+      },
+      {
+        "metric": "完成计算窗口最大耗时 ms",
+        "previous": 401.232,
+        "current": 399.888
+      },
+      {
+        "metric": "系统内部 RAM 堆占用峰值上界 B",
+        "previous": 207212,
+        "current": 207228
+      },
+      {
+        "metric": "系统 PSRAM 堆占用峰值上界 B",
+        "previous": 120752,
+        "current": 120752
+      },
+      {
+        "metric": "任务启动以来栈使用峰值 B",
+        "previous": 3204,
+        "current": 3204
+      }
+    ]
+  }
+}

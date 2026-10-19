@@ -1,0 +1,1143 @@
+{
+  "condition_labels": "Both Wi-Fi disabled; BP calculation off/on according to supplied filenames",
+  "comparison_assumption": "Same supply, acquisition, signal, serial output and instrument settings except BP switch; not independently verified from CSV",
+  "sources": {
+    "off": {
+      "path": "C:\\Users\\T\\Desktop\\未加载血压计算数据（无wifi）.csv",
+      "filename": "未加载血压计算数据（无wifi）.csv",
+      "encoding": "gb18030",
+      "sha256": "2cf8c65836d0fceda52df67ba716e1bacd19ff013c4c689b1fe8b7cc2889ebc1",
+      "rows": 16580,
+      "start_s": 0.0,
+      "end_s": 33.158,
+      "duration_s": 33.158,
+      "dt_ms_counts": {
+        "2.0": 16579
+      },
+      "missing_or_nonfinite_rows": 0,
+      "max_abs_power_minus_UI_W": 5.200000000593619e-07,
+      "energy_counter_decreases": 0
+    },
+    "on": {
+      "path": "C:\\Users\\T\\Desktop\\运行血压数据(无wifi).csv",
+      "filename": "运行血压数据(无wifi).csv",
+      "encoding": "gb18030",
+      "sha256": "b520e8522b36d8b9da2caf53e45c55ba1186b84a9b1eca8f09f6a12cbae01e3e",
+      "rows": 20060,
+      "start_s": 0.0,
+      "end_s": 40.118,
+      "duration_s": 40.118,
+      "dt_ms_counts": {
+        "2.0": 20059
+      },
+      "missing_or_nonfinite_rows": 0,
+      "max_abs_power_minus_UI_W": 5.600000000383076e-07,
+      "energy_counter_decreases": 0
+    }
+  },
+  "primary_0_to_30_s": {
+    "conditions": {
+      "off": {
+        "start_s": 0,
+        "end_s": 30,
+        "duration_s": 30,
+        "sample_count": 15001,
+        "mean_power_W": 0.5107155289333327,
+        "arithmetic_mean_power_W": 0.5107152496500234,
+        "mean_voltage_V": 4.930279106666637,
+        "mean_current_A": 0.10358723999999957,
+        "min_power_W": 0.49248,
+        "max_power_W": 0.54804,
+        "median_power_W": 0.502617,
+        "p95_power_W": 0.539813,
+        "std_power_W_descriptive": 0.014433269676181058,
+        "energy_J": 15.321465867999981,
+        "energy_mWh": 4.255962741111106,
+        "instrument_cumulative_energy_delta_J": 15.3214509456,
+        "energy_integration_minus_counter_J": 1.4922399980576984e-05,
+        "energy_integration_minus_counter_pct": 9.739547536039583e-05
+      },
+      "on": {
+        "start_s": 0,
+        "end_s": 30,
+        "duration_s": 30,
+        "sample_count": 15001,
+        "mean_power_W": 0.523638981899999,
+        "arithmetic_mean_power_W": 0.523639227984801,
+        "mean_voltage_V": 4.927443843333387,
+        "mean_current_A": 0.10627218666666431,
+        "min_power_W": 0.49223,
+        "max_power_W": 0.627593,
+        "median_power_W": 0.507699,
+        "p95_power_W": 0.580985,
+        "std_power_W_descriptive": 0.028860076961978738,
+        "energy_J": 15.709169456999971,
+        "energy_mWh": 4.363658182499992,
+        "instrument_cumulative_energy_delta_J": 15.709169343600001,
+        "energy_integration_minus_counter_J": 1.133999703029076e-07,
+        "energy_integration_minus_counter_pct": 7.218712066981909e-07
+      }
+    },
+    "difference": {
+      "incremental_mean_power_W": 0.012923452966666304,
+      "incremental_mean_power_mW": 12.923452966666304,
+      "relative_power_increase_pct": 2.530460155315395,
+      "incremental_energy_J": 0.38770358899999025,
+      "incremental_energy_mWh": 0.10769544138888598,
+      "incremental_mean_current_mA": 2.684946666664745
+    }
+  },
+  "sensitivity_5_to_30_s": {
+    "conditions": {
+      "off": {
+        "start_s": 5,
+        "end_s": 30,
+        "duration_s": 25,
+        "sample_count": 12501,
+        "mean_power_W": 0.5106242071599998,
+        "arithmetic_mean_power_W": 0.5106240867930566,
+        "mean_voltage_V": 4.930168899999959,
+        "mean_current_A": 0.10357101599999911,
+        "min_power_W": 0.49261,
+        "max_power_W": 0.547763,
+        "median_power_W": 0.502617,
+        "p95_power_W": 0.539813,
+        "std_power_W_descriptive": 0.014428194720842733,
+        "energy_J": 12.765605178999996,
+        "energy_mWh": 3.54600143861111,
+        "instrument_cumulative_energy_delta_J": 12.765585599999998,
+        "energy_integration_minus_counter_J": 1.957899999815993e-05,
+        "energy_integration_minus_counter_pct": 0.0001533733007764245
+      },
+      "on": {
+        "start_s": 5,
+        "end_s": 30,
+        "duration_s": 25,
+        "sample_count": 12501,
+        "mean_power_W": 0.5257262060800004,
+        "arithmetic_mean_power_W": 0.5257256759459243,
+        "mean_voltage_V": 4.927039020000026,
+        "mean_current_A": 0.10670481199999862,
+        "min_power_W": 0.49236,
+        "max_power_W": 0.627593,
+        "median_power_W": 0.511454,
+        "p95_power_W": 0.585754,
+        "std_power_W_descriptive": 0.02999895526409854,
+        "energy_J": 13.143155152000011,
+        "energy_mWh": 3.650876431111114,
+        "instrument_cumulative_energy_delta_J": 13.1431716,
+        "energy_integration_minus_counter_J": -1.6447999989566142e-05,
+        "energy_integration_minus_counter_pct": -0.0001251448317814411
+      }
+    },
+    "difference": {
+      "incremental_mean_power_W": 0.015101998920000637,
+      "incremental_mean_power_mW": 15.101998920000636,
+      "relative_power_increase_pct": 2.9575564002332078,
+      "incremental_energy_J": 0.3775499730000149,
+      "incremental_energy_mWh": 0.1048749925000041,
+      "incremental_mean_current_mA": 3.1337959999995086
+    }
+  },
+  "all_common_0_to_end": {
+    "conditions": {
+      "off": {
+        "start_s": 0,
+        "end_s": 33.158,
+        "duration_s": 33.158,
+        "sample_count": 16580,
+        "mean_power_W": 0.5106586654502686,
+        "arithmetic_mean_power_W": 0.5106582599517491,
+        "mean_voltage_V": 4.9301558507750185,
+        "mean_current_A": 0.1035782978466734,
+        "min_power_W": 0.49198,
+        "max_power_W": 0.54804,
+        "median_power_W": 0.502617,
+        "p95_power_W": 0.539813,
+        "std_power_W_descriptive": 0.014410997999617177,
+        "energy_J": 16.932420029000006,
+        "energy_mWh": 4.703450008055557,
+        "instrument_cumulative_energy_delta_J": 16.9324149456,
+        "energy_integration_minus_counter_J": 5.0834000049349015e-06,
+        "energy_integration_minus_counter_pct": 3.002170701147302e-05
+      },
+      "on": {
+        "start_s": 0,
+        "end_s": 33.158,
+        "duration_s": 33.158,
+        "sample_count": 16580,
+        "mean_power_W": 0.5247008824416413,
+        "arithmetic_mean_power_W": 0.5247002867310012,
+        "mean_voltage_V": 4.927284827191071,
+        "mean_current_A": 0.1064913293926028,
+        "min_power_W": 0.49223,
+        "max_power_W": 0.627593,
+        "median_power_W": 0.509383,
+        "p95_power_W": 0.583447,
+        "std_power_W_descriptive": 0.029499440180217884,
+        "energy_J": 17.398031859999943,
+        "energy_mWh": 4.832786627777762,
+        "instrument_cumulative_energy_delta_J": 17.3980013436,
+        "energy_integration_minus_counter_J": 3.0516399942115413e-05,
+        "energy_integration_minus_counter_pct": 0.00017540175643992076
+      }
+    },
+    "difference": {
+      "incremental_mean_power_W": 0.014042216991372647,
+      "incremental_mean_power_mW": 14.042216991372648,
+      "relative_power_increase_pct": 2.7498244799177174,
+      "incremental_energy_J": 0.4656118309999364,
+      "incremental_energy_mWh": 0.12933661972220456,
+      "incremental_mean_current_mA": 2.913031545929395
+    }
+  },
+  "all_common_5_to_end": {
+    "conditions": {
+      "off": {
+        "start_s": 5,
+        "end_s": 33.158,
+        "duration_s": 28.158,
+        "sample_count": 14080,
+        "mean_power_W": 0.5105674884579865,
+        "arithmetic_mean_power_W": 0.5105672016335228,
+        "mean_voltage_V": 4.930036117621931,
+        "mean_current_A": 0.1035623055614741,
+        "min_power_W": 0.49198,
+        "max_power_W": 0.547763,
+        "median_power_W": 0.502495,
+        "p95_power_W": 0.539682,
+        "std_power_W_descriptive": 0.014402153980445438,
+        "energy_J": 14.376559339999986,
+        "energy_mWh": 3.9934887055555515,
+        "instrument_cumulative_energy_delta_J": 14.3765496,
+        "energy_integration_minus_counter_J": 9.739999985214354e-06,
+        "energy_integration_minus_counter_pct": 6.774921838835622e-05
+      },
+      "on": {
+        "start_s": 5,
+        "end_s": 33.158,
+        "duration_s": 28.158,
+        "sample_count": 14080,
+        "mean_power_W": 0.5267425795511038,
+        "arithmetic_mean_power_W": 0.5267411484375,
+        "mean_voltage_V": 4.926897169543307,
+        "mean_current_A": 0.10691434760991404,
+        "min_power_W": 0.49236,
+        "max_power_W": 0.627593,
+        "median_power_W": 0.513502,
+        "p95_power_W": 0.5867436999999998,
+        "std_power_W_descriptive": 0.030527477409261882,
+        "energy_J": 14.832017554999982,
+        "energy_mWh": 4.120004876388884,
+        "instrument_cumulative_energy_delta_J": 14.8320036,
+        "energy_integration_minus_counter_J": 1.3954999982246363e-05,
+        "energy_integration_minus_counter_pct": 9.408708599724425e-05
+      }
+    },
+    "difference": {
+      "incremental_mean_power_W": 0.016175091093117322,
+      "incremental_mean_power_mW": 16.175091093117324,
+      "relative_power_increase_pct": 3.1680613158447057,
+      "incremental_energy_J": 0.4554582149999966,
+      "incremental_energy_mWh": 0.12651617083333244,
+      "incremental_mean_current_mA": 3.3520420484399462
+    }
+  },
+  "full_records": {
+    "off": {
+      "start_s": 0.0,
+      "end_s": 33.158,
+      "duration_s": 33.158,
+      "sample_count": 16580,
+      "mean_power_W": 0.5106586654502686,
+      "arithmetic_mean_power_W": 0.5106582599517491,
+      "mean_voltage_V": 4.9301558507750185,
+      "mean_current_A": 0.1035782978466734,
+      "min_power_W": 0.49198,
+      "max_power_W": 0.54804,
+      "median_power_W": 0.502617,
+      "p95_power_W": 0.539813,
+      "std_power_W_descriptive": 0.014410997999617177,
+      "energy_J": 16.932420029000006,
+      "energy_mWh": 4.703450008055557,
+      "instrument_cumulative_energy_delta_J": 16.9324149456,
+      "energy_integration_minus_counter_J": 5.0834000049349015e-06,
+      "energy_integration_minus_counter_pct": 3.002170701147302e-05
+    },
+    "on": {
+      "start_s": 0.0,
+      "end_s": 40.118,
+      "duration_s": 40.118,
+      "sample_count": 20060,
+      "mean_power_W": 0.5238588207288498,
+      "arithmetic_mean_power_W": 0.5238582411266202,
+      "mean_voltage_V": 4.927378279076717,
+      "mean_current_A": 0.10631826860760536,
+      "min_power_W": 0.49223,
+      "max_power_W": 0.627593,
+      "median_power_W": 0.50899,
+      "p95_power_W": 0.581126,
+      "std_power_W_descriptive": 0.029005547972289974,
+      "energy_J": 21.016168169999997,
+      "energy_mWh": 5.837824491666666,
+      "instrument_cumulative_energy_delta_J": 21.016145343599998,
+      "energy_integration_minus_counter_J": 2.2826399998621127e-05,
+      "energy_integration_minus_counter_pct": 0.00010861363787423749
+    }
+  },
+  "five_second_blocks": [
+    {
+      "start_s": 0,
+      "end_s": 5,
+      "conditions": {
+        "off": {
+          "start_s": 0,
+          "end_s": 5,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5111721378000016,
+          "arithmetic_mean_power_W": 0.5111713170731708,
+          "mean_voltage_V": 4.930830140000005,
+          "mean_current_A": 0.10366835999999972,
+          "min_power_W": 0.49248,
+          "max_power_W": 0.54804,
+          "median_power_W": 0.503807,
+          "p95_power_W": 0.539955,
+          "std_power_W_descriptive": 0.014447109005485416,
+          "energy_J": 2.555860689000008,
+          "energy_mWh": 0.7099613025000022,
+          "instrument_cumulative_energy_delta_J": 2.5558653456,
+          "energy_integration_minus_counter_J": -4.656599991825772e-06,
+          "energy_integration_minus_counter_pct": -0.00018219269649092626
+        },
+        "on": {
+          "start_s": 0,
+          "end_s": 5,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5132028609999996,
+          "arithmetic_mean_power_W": 0.5132044182327069,
+          "mean_voltage_V": 4.929467960000005,
+          "mean_current_A": 0.10410906000000013,
+          "min_power_W": 0.49223,
+          "max_power_W": 0.625132,
+          "median_power_W": 0.50224,
+          "p95_power_W": 0.547485,
+          "std_power_W_descriptive": 0.019156056420244254,
+          "energy_J": 2.5660143049999977,
+          "energy_mWh": 0.7127817513888882,
+          "instrument_cumulative_energy_delta_J": 2.5659977436,
+          "energy_integration_minus_counter_J": 1.6561399997616633e-05,
+          "energy_integration_minus_counter_pct": 0.0006454175588783488
+        }
+      },
+      "difference": {
+        "incremental_mean_power_W": 0.0020307231999979747,
+        "incremental_mean_power_mW": 2.0307231999979747,
+        "relative_power_increase_pct": 0.39726797488177645,
+        "incremental_energy_J": 0.01015361599998954,
+        "incremental_energy_mWh": 0.0028204488888859958,
+        "incremental_mean_current_mA": 0.44070000000040466
+      }
+    },
+    {
+      "start_s": 5,
+      "end_s": 10,
+      "conditions": {
+        "off": {
+          "start_s": 5,
+          "end_s": 10,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5111513740000008,
+          "arithmetic_mean_power_W": 0.5111492359056378,
+          "mean_voltage_V": 4.931765000000007,
+          "mean_current_A": 0.10364437999999994,
+          "min_power_W": 0.49361,
+          "max_power_W": 0.546797,
+          "median_power_W": 0.502917,
+          "p95_power_W": 0.539955,
+          "std_power_W_descriptive": 0.014551401100606428,
+          "energy_J": 2.5557568700000037,
+          "energy_mWh": 0.7099324638888899,
+          "instrument_cumulative_energy_delta_J": 2.5557336,
+          "energy_integration_minus_counter_J": 2.3270000003794422e-05,
+          "energy_integration_minus_counter_pct": 0.0009105017832764113
+        },
+        "on": {
+          "start_s": 5,
+          "end_s": 10,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5343953209999992,
+          "arithmetic_mean_power_W": 0.5343829492203119,
+          "mean_voltage_V": 4.926249880000011,
+          "mean_current_A": 0.10848257999999991,
+          "min_power_W": 0.49248,
+          "max_power_W": 0.618197,
+          "median_power_W": 0.532418,
+          "p95_power_W": 0.592423,
+          "std_power_W_descriptive": 0.03294198957496887,
+          "energy_J": 2.6719766049999962,
+          "energy_mWh": 0.7422157236111101,
+          "instrument_cumulative_energy_delta_J": 2.6719596,
+          "energy_integration_minus_counter_J": 1.700499999612859e-05,
+          "energy_integration_minus_counter_pct": 0.0006364242930966691
+        }
+      },
+      "difference": {
+        "incremental_mean_power_W": 0.023243946999998433,
+        "incremental_mean_power_mW": 23.243946999998432,
+        "relative_power_increase_pct": 4.547370540766349,
+        "incremental_energy_J": 0.1162197349999925,
+        "incremental_energy_mWh": 0.03228325972222024,
+        "incremental_mean_current_mA": 4.838199999999973
+      }
+    },
+    {
+      "start_s": 10,
+      "end_s": 15,
+      "conditions": {
+        "off": {
+          "start_s": 10,
+          "end_s": 15,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5107751019999995,
+          "arithmetic_mean_power_W": 0.5107712451019593,
+          "mean_voltage_V": 4.930238160000018,
+          "mean_current_A": 0.10360017999999986,
+          "min_power_W": 0.49336,
+          "max_power_W": 0.547763,
+          "median_power_W": 0.502617,
+          "p95_power_W": 0.539682,
+          "std_power_W_descriptive": 0.01436576579611186,
+          "energy_J": 2.553875509999998,
+          "energy_mWh": 0.7094098638888883,
+          "instrument_cumulative_energy_delta_J": 2.553876,
+          "energy_integration_minus_counter_J": -4.900000019070205e-07,
+          "energy_integration_minus_counter_pct": -1.9186522834586354e-05
+        },
+        "on": {
+          "start_s": 10,
+          "end_s": 15,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5311267333999996,
+          "arithmetic_mean_power_W": 0.5311136989204318,
+          "mean_voltage_V": 4.926272040000013,
+          "mean_current_A": 0.10781845999999991,
+          "min_power_W": 0.49236,
+          "max_power_W": 0.62021,
+          "median_power_W": 0.522066,
+          "p95_power_W": 0.590976,
+          "std_power_W_descriptive": 0.03225228792154822,
+          "energy_J": 2.6556336669999983,
+          "energy_mWh": 0.7376760186111107,
+          "instrument_cumulative_energy_delta_J": 2.655648,
+          "energy_integration_minus_counter_J": -1.4333000001531815e-05,
+          "energy_integration_minus_counter_pct": -0.0005397176132353315
+        }
+      },
+      "difference": {
+        "incremental_mean_power_W": 0.02035163140000007,
+        "incremental_mean_power_mW": 20.35163140000007,
+        "relative_power_increase_pct": 3.9844603466987483,
+        "incremental_energy_J": 0.10175815700000035,
+        "incremental_energy_mWh": 0.02826615472222238,
+        "incremental_mean_current_mA": 4.218280000000046
+      }
+    },
+    {
+      "start_s": 15,
+      "end_s": 20,
+      "conditions": {
+        "off": {
+          "start_s": 15,
+          "end_s": 20,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5106480176,
+          "arithmetic_mean_power_W": 0.5106445521791284,
+          "mean_voltage_V": 4.9296546200000275,
+          "mean_current_A": 0.10358663999999942,
+          "min_power_W": 0.494942,
+          "max_power_W": 0.547763,
+          "median_power_W": 0.502495,
+          "p95_power_W": 0.539955,
+          "std_power_W_descriptive": 0.014517998990931771,
+          "energy_J": 2.553240088,
+          "energy_mWh": 0.7092333577777777,
+          "instrument_cumulative_energy_delta_J": 2.5532640000000013,
+          "energy_integration_minus_counter_J": -2.391200000140259e-05,
+          "energy_integration_minus_counter_pct": -0.0009365267360289644
+        },
+        "on": {
+          "start_s": 15,
+          "end_s": 20,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5178985445999997,
+          "arithmetic_mean_power_W": 0.5178920031987205,
+          "mean_voltage_V": 4.92786456000002,
+          "mean_current_A": 0.10509699999999941,
+          "min_power_W": 0.49261,
+          "max_power_W": 0.61958,
+          "median_power_W": 0.504196,
+          "p95_power_W": 0.563683,
+          "std_power_W_descriptive": 0.02436705654095713,
+          "energy_J": 2.5894927229999984,
+          "energy_mWh": 0.7193035341666663,
+          "instrument_cumulative_energy_delta_J": 2.58948,
+          "energy_integration_minus_counter_J": 1.2722999998437956e-05,
+          "energy_integration_minus_counter_pct": 0.0004913341674173176
+        }
+      },
+      "difference": {
+        "incremental_mean_power_W": 0.007250526999999729,
+        "incremental_mean_power_mW": 7.250526999999729,
+        "relative_power_increase_pct": 1.4198678444061308,
+        "incremental_energy_J": 0.036252634999998534,
+        "incremental_energy_mWh": 0.010070176388888519,
+        "incremental_mean_current_mA": 1.5103599999999884
+      }
+    },
+    {
+      "start_s": 20,
+      "end_s": 25,
+      "conditions": {
+        "off": {
+          "start_s": 20,
+          "end_s": 25,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5103628223999993,
+          "arithmetic_mean_power_W": 0.5103585301879249,
+          "mean_voltage_V": 4.930109640000006,
+          "mean_current_A": 0.10351927999999946,
+          "min_power_W": 0.49261,
+          "max_power_W": 0.545163,
+          "median_power_W": 0.502495,
+          "p95_power_W": 0.539682,
+          "std_power_W_descriptive": 0.014375020117517632,
+          "energy_J": 2.5518141119999966,
+          "energy_mWh": 0.7088372533333324,
+          "instrument_cumulative_energy_delta_J": 2.551787999999999,
+          "energy_integration_minus_counter_J": 2.6111999997802116e-05,
+          "energy_integration_minus_counter_pct": 0.0010232824983032339
+        },
+        "on": {
+          "start_s": 20,
+          "end_s": 25,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5140532564,
+          "arithmetic_mean_power_W": 0.5140507145141944,
+          "mean_voltage_V": 4.9286613200000104,
+          "mean_current_A": 0.1042988599999997,
+          "min_power_W": 0.49261,
+          "max_power_W": 0.622038,
+          "median_power_W": 0.50224,
+          "p95_power_W": 0.549329,
+          "std_power_W_descriptive": 0.020314780073520142,
+          "energy_J": 2.570266282,
+          "energy_mWh": 0.7139628561111111,
+          "instrument_cumulative_energy_delta_J": 2.570292,
+          "energy_integration_minus_counter_J": -2.5717999999841368e-05,
+          "energy_integration_minus_counter_pct": -0.001000586703761338
+        }
+      },
+      "difference": {
+        "incremental_mean_power_W": 0.0036904340000006863,
+        "incremental_mean_power_mW": 3.6904340000006863,
+        "relative_power_increase_pct": 0.7231000844940549,
+        "incremental_energy_J": 0.01845217000000332,
+        "incremental_energy_mWh": 0.005125602777778737,
+        "incremental_mean_current_mA": 0.7795800000002379
+      }
+    },
+    {
+      "start_s": 25,
+      "end_s": 30,
+      "conditions": {
+        "off": {
+          "start_s": 25,
+          "end_s": 30,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5101837198000012,
+          "arithmetic_mean_power_W": 0.5101804842063175,
+          "mean_voltage_V": 4.929077080000022,
+          "mean_current_A": 0.10350459999999947,
+          "min_power_W": 0.49273,
+          "max_power_W": 0.54461,
+          "median_power_W": 0.502363,
+          "p95_power_W": 0.538718,
+          "std_power_W_descriptive": 0.01430409123226841,
+          "energy_J": 2.550918599000006,
+          "energy_mWh": 0.7085884997222238,
+          "instrument_cumulative_energy_delta_J": 2.5509239999999993,
+          "energy_integration_minus_counter_J": -5.4009999934656605e-06,
+          "energy_integration_minus_counter_pct": -0.00021172720133824692
+        },
+        "on": {
+          "start_s": 25,
+          "end_s": 30,
+          "duration_s": 5,
+          "sample_count": 2501,
+          "mean_power_W": 0.5311571749999999,
+          "arithmetic_mean_power_W": 0.5311528460615754,
+          "mean_voltage_V": 4.926147300000019,
+          "mean_current_A": 0.10782715999999985,
+          "min_power_W": 0.49248,
+          "max_power_W": 0.627593,
+          "median_power_W": 0.522066,
+          "p95_power_W": 0.590832,
+          "std_power_W_descriptive": 0.03218969593102489,
+          "energy_J": 2.6557858749999994,
+          "energy_mWh": 0.7377182986111109,
+          "instrument_cumulative_energy_delta_J": 2.6557920000000013,
+          "energy_integration_minus_counter_J": -6.125000001855341e-06,
+          "energy_integration_minus_counter_pct": -0.00023062800105788924
+        }
+      },
+      "difference": {
+        "incremental_mean_power_W": 0.020973455199998714,
+        "incremental_mean_power_mW": 20.973455199998714,
+        "relative_power_increase_pct": 4.11096128434294,
+        "incremental_energy_J": 0.10486727599999357,
+        "incremental_energy_mWh": 0.029129798888887115,
+        "incremental_mean_current_mA": 4.322560000000378
+      }
+    }
+  ],
+  "wide_excursions_0_to_30_s": {
+    "off": {
+      "method": "20 ms moving-average power > 0.55 W; merge gaps <= 50 ms; keep spans >= 100 ms",
+      "threshold_W": 0.55,
+      "events": [],
+      "count": 0,
+      "median_span_ms": null,
+      "min_span_ms": null,
+      "max_span_ms": null,
+      "median_start_interval_ms": null,
+      "median_event_mean_power_W": null,
+      "above_1W_sample_count": 0,
+      "above_1W_event_count": 0
+    },
+    "on": {
+      "method": "20 ms moving-average power > 0.55 W; merge gaps <= 50 ms; keep spans >= 100 ms",
+      "threshold_W": 0.55,
+      "events": [
+        {
+          "start_s": 5.366,
+          "end_s": 5.712000000000001,
+          "duration_ms": 346.0000000000003,
+          "mean_power_W": 0.5683874364161848,
+          "max_power_W": 0.617106
+        },
+        {
+          "start_s": 6.368,
+          "end_s": 6.726000000000001,
+          "duration_ms": 357.9999999999999,
+          "mean_power_W": 0.569559751396648,
+          "max_power_W": 0.613859
+        },
+        {
+          "start_s": 7.367999999999999,
+          "end_s": 7.764,
+          "duration_ms": 396.0000000000001,
+          "mean_power_W": 0.5713046616161614,
+          "max_power_W": 0.618197
+        },
+        {
+          "start_s": 8.364,
+          "end_s": 8.766,
+          "duration_ms": 402.00000000000034,
+          "mean_power_W": 0.5713914179104476,
+          "max_power_W": 0.616793
+        },
+        {
+          "start_s": 9.364,
+          "end_s": 9.768,
+          "duration_ms": 404.000000000001,
+          "mean_power_W": 0.5712588688118809,
+          "max_power_W": 0.617419
+        },
+        {
+          "start_s": 10.366,
+          "end_s": 10.770000000000001,
+          "duration_ms": 404.0000000000028,
+          "mean_power_W": 0.5714534727722773,
+          "max_power_W": 0.620059
+        },
+        {
+          "start_s": 11.367999999999999,
+          "end_s": 11.767999999999999,
+          "duration_ms": 400.0000000000015,
+          "mean_power_W": 0.5709118575,
+          "max_power_W": 0.615107
+        },
+        {
+          "start_s": 13.368000000000002,
+          "end_s": 13.728,
+          "duration_ms": 359.99999999999875,
+          "mean_power_W": 0.5695036722222225,
+          "max_power_W": 0.62021
+        },
+        {
+          "start_s": 14.364,
+          "end_s": 14.764,
+          "duration_ms": 399.9999999999997,
+          "mean_power_W": 0.5715290924999997,
+          "max_power_W": 0.614645
+        },
+        {
+          "start_s": 17.368,
+          "end_s": 17.732000000000003,
+          "duration_ms": 364.0000000000019,
+          "mean_power_W": 0.5696842252747248,
+          "max_power_W": 0.61958
+        },
+        {
+          "start_s": 26.363999999999997,
+          "end_s": 26.730000000000004,
+          "duration_ms": 366.0000000000043,
+          "mean_power_W": 0.5693966693989077,
+          "max_power_W": 0.627593
+        },
+        {
+          "start_s": 27.366000000000003,
+          "end_s": 27.768000000000004,
+          "duration_ms": 401.9999999999986,
+          "mean_power_W": 0.571302196517413,
+          "max_power_W": 0.617106
+        },
+        {
+          "start_s": 28.368,
+          "end_s": 28.772000000000006,
+          "duration_ms": 404.0000000000046,
+          "mean_power_W": 0.5716371930693067,
+          "max_power_W": 0.617106
+        },
+        {
+          "start_s": 29.368,
+          "end_s": 29.768,
+          "duration_ms": 399.9999999999997,
+          "mean_power_W": 0.5708150199999998,
+          "max_power_W": 0.617256
+        }
+      ],
+      "count": 14,
+      "median_span_ms": 399.9999999999997,
+      "min_span_ms": 346.0000000000003,
+      "max_span_ms": 404.0000000000046,
+      "median_start_interval_ms": 1001.9999999999989,
+      "median_event_mean_power_W": 0.5710853631559405,
+      "above_1W_sample_count": 0,
+      "above_1W_event_count": 0
+    }
+  },
+  "methods": {
+    "mean_power": "Trapezoidal integral of raw recorded power divided by elapsed time; no peaks removed",
+    "delta": "Mean BP-on minus mean BP-off in independent equal-duration recordings; not synchronized subtraction",
+    "primary": "0-30 s for consistency with earlier Wi-Fi-enabled report",
+    "sensitivity": "5-30 s excludes first five seconds but does not establish startup time or steady state",
+    "counter_check": "Compare raw-power integral with cumulative Wh(end)-Wh(start), times 3600"
+  },
+  "limitations": [
+    "One independent recording per condition; samples/5 s blocks are not repeated trials.",
+    "No synchronized task markers or output count; no measured per-inference energy or runtime.",
+    "Input power at instrument boundary includes acquisition, peripheral loads, serial output and conversion losses.",
+    "Increment includes BP feature extraction, model inference, postprocessing and their downstream overhead.",
+    "Power-envelope widths are descriptive and depend on threshold and smoothing; not task runtimes.",
+    "2 ms export interval does not establish instrument bandwidth, instantaneous peak or accuracy."
+  ],
+  "earlier_wifi_enabled": {
+    "source_report": "../bp_power_20261019/report.md",
+    "primary": {
+      "off": {
+        "start_s": 0,
+        "end_s": 30,
+        "duration_s": 30,
+        "sample_count": 15001,
+        "mean_power_W": 0.6712672258999943,
+        "arithmetic_mean_power_W": 0.6713170201319912,
+        "mean_voltage_V": 4.908397133333259,
+        "mean_current_A": 0.1368346466666696,
+        "min_power_W": 0.610941,
+        "max_power_W": 1.87663,
+        "median_power_W": 0.639416,
+        "p95_power_W": 0.683829,
+        "std_power_W_descriptive": 0.1557684382903303,
+        "energy_J": 20.13801677699983,
+        "energy_mWh": 5.593893549166619,
+        "instrument_cumulative_energy_delta_J": 20.138885996400003,
+        "energy_integration_minus_counter_J": -0.0008692194001724829,
+        "energy_integration_minus_counter_pct": -0.0043161245380100135
+      },
+      "on": {
+        "start_s": 0,
+        "end_s": 30,
+        "duration_s": 30,
+        "sample_count": 15001,
+        "mean_power_W": 0.6837380101333388,
+        "arithmetic_mean_power_W": 0.6837348597426838,
+        "mean_voltage_V": 4.907077546666519,
+        "mean_current_A": 0.13941739333333555,
+        "min_power_W": 0.613846,
+        "max_power_W": 1.94474,
+        "median_power_W": 0.648915,
+        "p95_power_W": 0.729225,
+        "std_power_W_descriptive": 0.15979118336650017,
+        "energy_J": 20.512140304000162,
+        "energy_mWh": 5.697816751111156,
+        "instrument_cumulative_energy_delta_J": 20.5121403396,
+        "energy_integration_minus_counter_J": -3.5599835968014304e-08,
+        "energy_integration_minus_counter_pct": -1.73554955156418e-07
+      }
+    },
+    "difference": {
+      "incremental_mean_power_W": 0.012470784233344467,
+      "incremental_mean_power_mW": 12.470784233344467,
+      "relative_power_increase_pct": 1.8577972753882621,
+      "incremental_energy_J": 0.37412352700033225,
+      "incremental_energy_mWh": 0.10392320194453664,
+      "incremental_mean_current_mA": 2.5827466666659413
+    },
+    "sensitivity_5_to_30_s": {
+      "conditions": {
+        "off": {
+          "start_s": 5,
+          "end_s": 30,
+          "duration_s": 25,
+          "sample_count": 12501,
+          "mean_power_W": 0.6709316745599988,
+          "arithmetic_mean_power_W": 0.6709785898728102,
+          "mean_voltage_V": 4.908223031999912,
+          "mean_current_A": 0.13677004400000267,
+          "min_power_W": 0.610941,
+          "max_power_W": 1.87663,
+          "median_power_W": 0.639259,
+          "p95_power_W": 0.683829,
+          "std_power_W_descriptive": 0.1548358841014123,
+          "energy_J": 16.77329186399997,
+          "energy_mWh": 4.659247739999992,
+          "instrument_cumulative_energy_delta_J": 16.774484400000002,
+          "energy_integration_minus_counter_J": -0.0011925360000333285,
+          "energy_integration_minus_counter_pct": -0.007109225962458365
+        },
+        "on": {
+          "start_s": 5,
+          "end_s": 30,
+          "duration_s": 25,
+          "sample_count": 12501,
+          "mean_power_W": 0.6858121372400001,
+          "arithmetic_mean_power_W": 0.6858087078633709,
+          "mean_voltage_V": 4.906901615999851,
+          "mean_current_A": 0.13984499600000283,
+          "min_power_W": 0.614121,
+          "max_power_W": 1.94474,
+          "median_power_W": 0.649245,
+          "p95_power_W": 0.731499,
+          "std_power_W_descriptive": 0.16184258367236465,
+          "energy_J": 17.145303431000002,
+          "energy_mWh": 4.762584286388889,
+          "instrument_cumulative_energy_delta_J": 17.1452916,
+          "energy_integration_minus_counter_J": 1.1831000001905068e-05,
+          "energy_integration_minus_counter_pct": 6.900436736756969e-05
+        }
+      },
+      "difference": {
+        "incremental_mean_power_W": 0.014880462680001316,
+        "incremental_mean_power_mW": 14.880462680001315,
+        "relative_power_increase_pct": 2.217880485335555,
+        "incremental_energy_J": 0.37201156700003324,
+        "incremental_energy_mWh": 0.10333654638889733,
+        "incremental_mean_current_mA": 3.0749520000001587
+      }
+    },
+    "spikes": {
+      "off": {
+        "source": {
+          "path": "C:\\Users\\T\\Desktop\\未加载血压计算数据.csv",
+          "filename": "未加载血压计算数据.csv",
+          "encoding": "gb18030",
+          "sha256": "e6f01efc3ffd8bd39ea1cb6941a5a0465226d8b761e7c313de64366d786db99b",
+          "rows": 15420,
+          "start_s": 0.0,
+          "end_s": 30.838,
+          "duration_s": 30.838,
+          "dt_ms_counts": {
+            "2.0": 15419
+          },
+          "missing_or_nonfinite_rows": 0,
+          "max_abs_power_minus_UI_W": 5.119999999969593e-06,
+          "energy_counter_decreases": 0
+        },
+        "peak_W": 1.87663,
+        "peak_current_A": 0.3901,
+        "voltage_median_at_P_above_1W_V": 4.8435,
+        "voltage_median_at_P_below_0_8W_V": 4.9123,
+        "current_median_at_P_above_1W_A": 0.3338,
+        "current_median_at_P_below_0_8W_A": 0.1301,
+        "current_voltage_correlation": -0.5461638820232204,
+        "thresholds": {
+          "1": {
+            "threshold_W": 1,
+            "event_count": 313,
+            "above_threshold_samples": 393,
+            "sample_fraction_pct": 2.6198253449770013,
+            "median_event_sample_span_ms": 2.0,
+            "max_event_sample_span_ms": 16.0,
+            "median_peak_interval_ms": 102.00000000000031,
+            "most_common_peak_intervals_ms": [
+              [
+                102,
+                114
+              ],
+              [
+                104,
+                87
+              ],
+              [
+                100,
+                49
+              ],
+              [
+                106,
+                16
+              ],
+              [
+                98,
+                12
+              ],
+              [
+                6,
+                5
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                96,
+                2
+              ],
+              [
+                42,
+                2
+              ],
+              [
+                8,
+                2
+              ]
+            ],
+            "phase_concentration_at_102_4_ms": 0.9214448809542188,
+            "phase_concentration_at_100_ms": 0.008441647906884505
+          },
+          "1.5": {
+            "threshold_W": 1.5,
+            "event_count": 221,
+            "above_threshold_samples": 253,
+            "sample_fraction_pct": 1.6865542297180187,
+            "median_event_sample_span_ms": 2.0,
+            "max_event_sample_span_ms": 6.0,
+            "median_peak_interval_ms": 103.9999999999992,
+            "most_common_peak_intervals_ms": [
+              [
+                102,
+                56
+              ],
+              [
+                104,
+                46
+              ],
+              [
+                204,
+                41
+              ],
+              [
+                100,
+                13
+              ],
+              [
+                308,
+                7
+              ],
+              [
+                206,
+                7
+              ],
+              [
+                98,
+                6
+              ],
+              [
+                106,
+                5
+              ],
+              [
+                202,
+                4
+              ],
+              [
+                306,
+                4
+              ]
+            ],
+            "phase_concentration_at_102_4_ms": 0.9103057504049895,
+            "phase_concentration_at_100_ms": 0.006045222499894216
+          }
+        },
+        "dominant_spike_train_frequency_5_to_15_Hz": 9.766015598960069,
+        "dominant_spike_train_period_ms": 102.39590443686008,
+        "largest_autocorrelation_80_to_130_ms": [
+          51,
+          0.417349813620566
+        ]
+      },
+      "on": {
+        "source": {
+          "path": "C:\\Users\\T\\Desktop\\运行血压数据.csv",
+          "filename": "运行血压数据.csv",
+          "encoding": "gb18030",
+          "sha256": "e9948a6311d0375298b4b9023eb2aee50ecd86f959d8a95be9096e15588ee6f3",
+          "rows": 16492,
+          "start_s": 0.0,
+          "end_s": 32.982,
+          "duration_s": 32.982,
+          "dt_ms_counts": {
+            "2.0": 16491
+          },
+          "missing_or_nonfinite_rows": 0,
+          "max_abs_power_minus_UI_W": 5.099999999869098e-06,
+          "energy_counter_decreases": 0
+        },
+        "peak_W": 1.94474,
+        "peak_current_A": 0.4011,
+        "voltage_median_at_P_above_1W_V": 4.8273,
+        "voltage_median_at_P_below_0_8W_V": 4.9111,
+        "current_median_at_P_above_1W_A": 0.3507,
+        "current_median_at_P_below_0_8W_A": 0.1316,
+        "current_voltage_correlation": -0.5706760174197884,
+        "thresholds": {
+          "1": {
+            "threshold_W": 1,
+            "event_count": 314,
+            "above_threshold_samples": 397,
+            "sample_fraction_pct": 2.6464902339844008,
+            "median_event_sample_span_ms": 2.0,
+            "max_event_sample_span_ms": 8.0,
+            "median_peak_interval_ms": 102.00000000000031,
+            "most_common_peak_intervals_ms": [
+              [
+                102,
+                103
+              ],
+              [
+                104,
+                100
+              ],
+              [
+                100,
+                55
+              ],
+              [
+                106,
+                12
+              ],
+              [
+                98,
+                8
+              ],
+              [
+                20,
+                5
+              ],
+              [
+                16,
+                3
+              ],
+              [
+                90,
+                3
+              ],
+              [
+                42,
+                2
+              ],
+              [
+                64,
+                2
+              ]
+            ],
+            "phase_concentration_at_102_4_ms": 0.9299362535541686,
+            "phase_concentration_at_100_ms": 0.008176834571575826
+          },
+          "1.5": {
+            "threshold_W": 1.5,
+            "event_count": 230,
+            "above_threshold_samples": 257,
+            "sample_fraction_pct": 1.7132191187254182,
+            "median_event_sample_span_ms": 2.0,
+            "max_event_sample_span_ms": 6.0,
+            "median_peak_interval_ms": 103.9999999999992,
+            "most_common_peak_intervals_ms": [
+              [
+                104,
+                64
+              ],
+              [
+                102,
+                47
+              ],
+              [
+                204,
+                43
+              ],
+              [
+                100,
+                17
+              ],
+              [
+                106,
+                8
+              ],
+              [
+                98,
+                7
+              ],
+              [
+                308,
+                4
+              ],
+              [
+                202,
+                4
+              ],
+              [
+                20,
+                4
+              ],
+              [
+                306,
+                3
+              ]
+            ],
+            "phase_concentration_at_102_4_ms": 0.9235492398987198,
+            "phase_concentration_at_100_ms": 0.034299793304909044
+          }
+        },
+        "dominant_spike_train_frequency_5_to_15_Hz": 9.766015598960069,
+        "dominant_spike_train_period_ms": 102.39590443686008,
+        "largest_autocorrelation_80_to_130_ms": [
+          51,
+          0.4359987231548179
+        ]
+      }
+    },
+    "off_mean_power_reduction_mW": 160.5516969666616,
+    "on_mean_power_reduction_mW": 160.09902823333977
+  }
+}

@@ -1,0 +1,628 @@
+I (848) PROTOCOL: ready: identical 10-byte float32 frames via UART + Wi-Fi TCP
+I (850) IIC: I2C0 ready: SCL=GPIO4, SDA=GPIO5, device clock=100000 Hz
+I (852) IIC: Handle registered: address=0x34, clock=100000 Hz (not proof of ACK)
+I (853) AXP2101: Trying direct REG00 read at 100000 Hz
+I (854) AXP2101: Communication established at 100000 Hz: REG00=0x28
+I (857) AXP2101: Cell/button charging disabled; TS current off; CHGLED off (verified)
+I (859) PWR: Status=28/15, power-on=04, power-off=00
+I (875) PWR: DCDC1=3300mV, ALDO1=3300mV, ALDO2=1600mV
+I (875) PWR: Key: on=512ms, hardware off=6s; no software key handler
+I (882) WK_MODEL: WKESP1 ready: 8 models, 9341904 bytes in flash partition
+I (884) WK_RT: RESOURCE model_flash_B=9341904 partition_reserved_B=12582912
+I (885) WK_RT: RESOURCE pipeline_psram_B=85032 edge_state_included_B=7808 queue_payload_B=16384 task_stack_reserved_B=12288
+I (886) WK_RT: ready: AIN0=ECG AIN1=finger PPG AIN2=wrist PPG; 250 Hz acquisition -> 250 Hz model
+I (990) ADS131: SPI2 ready: CS=10 MOSI=11 SCK=12 MISO=13, mode=1, 1000000 Hz
+I (991) ADS131: SPI transport ready; acquisition setup will hardware-reset and configure ADC
+I (996) ADS131: Configured addr=0x03 value=0x0019
+I (997) ADS131: Configured addr=0x02 value=0x0110
+I (999) ADS131: Configured addr=0x04 value=0x0000
+I (1000) ADS131: Configured addr=0x06 value=0x0600
+I (1002) ADS131: Configured addr=0x09 value=0x0000
+I (1003) ADS131: Configured addr=0x0E value=0x0000
+I (1005) ADS131: Configured addr=0x13 value=0x0000
+I (1006) ADS131: Configured addr=0x03 value=0x0719
+I (1007) ADS131: AIN0..2 synchronous: CLKIN=4096000 Hz, OSR=8192, 250 SPS, gain=1
+I (1010) ACQ: Started 250 Hz: AIN0..2, 1250 samples/window, protocol streaming
+I (1011) main_task: Returned from app_main()
+I (8381) WK_RT: PROFILE status=output_ready n=1 sample=1750 time_us=354814 avg_us=354814 max_us=354814 over_hop=0 latency_us=354899 queue=88
+I (8384) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (8385) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (8386) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (8389) WK_RT: BP SBP=129.33 DBP=66.49 Q=0.72 process=354814us end_to_end=354899us (355 ticks, 355ms) ref=0
+I (9422) WK_RT: PROFILE status=output_ready n=2 sample=2000 time_us=395595 avg_us=375204 max_us=395595 over_hop=0 latency_us=395678 queue=98
+I (9425) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (9426) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (9427) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (9430) WK_RT: BP SBP=131.17 DBP=66.98 Q=0.74 process=395595us end_to_end=395678us (396 ticks, 396ms) ref=0
+I (10423) WK_RT: PROFILE status=output_ready n=3 sample=2250 time_us=397067 avg_us=382492 max_us=397067 over_hop=0 latency_us=397152 queue=99
+I (10426) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (10427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (10429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=116 psram_extra_peak_bound_B=28
+I (10431) WK_RT: BP SBP=132.01 DBP=68.01 Q=0.60 process=397067us end_to_end=397152us (397 ticks, 397ms) ref=0
+I (11424) WK_RT: PROFILE status=output_ready n=4 sample=2500 time_us=397398 avg_us=386218 max_us=397398 over_hop=0 latency_us=397478 queue=99
+I (11426) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (11428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (11429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (11431) WK_RT: BP SBP=132.23 DBP=68.47 Q=0.67 process=397398us end_to_end=397478us (398 ticks, 398ms) ref=0
+I (12424) WK_RT: PROFILE status=output_ready n=5 sample=2750 time_us=398000 avg_us=388574 max_us=398000 over_hop=0 latency_us=398084 queue=99
+I (12427) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (12428) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (12430) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (12432) WK_RT: BP SBP=132.74 DBP=69.19 Q=0.68 process=398000us end_to_end=398084us (398 ticks, 398ms) ref=0
+I (13421) WK_RT: PROFILE status=output_ready n=6 sample=3000 time_us=394628 avg_us=389583 max_us=398000 over_hop=0 latency_us=394710 queue=98
+I (13424) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (13425) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (13426) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (13429) WK_RT: BP SBP=133.77 DBP=69.61 Q=0.78 process=394628us end_to_end=394710us (395 ticks, 395ms) ref=0
+I (14424) WK_RT: PROFILE status=output_ready n=7 sample=3250 time_us=397340 avg_us=390691 max_us=398000 over_hop=0 latency_us=397424 queue=99
+I (14426) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (14428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (14429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (14432) WK_RT: BP SBP=133.97 DBP=69.58 Q=0.77 process=397340us end_to_end=397424us (398 ticks, 398ms) ref=0
+I (15423) WK_RT: PROFILE status=output_ready n=8 sample=3500 time_us=396272 avg_us=391389 max_us=398000 over_hop=0 latency_us=396354 queue=99
+I (15426) WK_RT: RAM stack_peak_since_start_B=3108 stack_reserved_B=12288
+I (15427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (15428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (15430) WK_RT: BP SBP=134.12 DBP=69.96 Q=0.74 process=396272us end_to_end=396354us (397 ticks, 397ms) ref=0
+I (16423) WK_RT: PROFILE status=output_ready n=9 sample=3750 time_us=396588 avg_us=391966 max_us=398000 over_hop=0 latency_us=396670 queue=99
+I (16426) WK_RT: RAM stack_peak_since_start_B=3124 stack_reserved_B=12288
+I (16427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (16428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (16431) WK_RT: BP SBP=133.77 DBP=69.81 Q=0.71 process=396588us end_to_end=396670us (397 ticks, 397ms) ref=0
+I (17422) WK_RT: PROFILE status=output_ready n=10 sample=4000 time_us=395286 avg_us=392298 max_us=398000 over_hop=0 latency_us=395417 queue=98
+I (17425) WK_RT: RAM stack_peak_since_start_B=3124 stack_reserved_B=12288
+I (17426) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (17427) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (17429) WK_RT: BP SBP=134.40 DBP=70.73 Q=0.76 process=395286us end_to_end=395417us (396 ticks, 396ms) ref=0
+I (18423) WK_RT: PROFILE status=output_ready n=11 sample=4250 time_us=396870 avg_us=392714 max_us=398000 over_hop=0 latency_us=396954 queue=99
+I (18426) WK_RT: RAM stack_peak_since_start_B=3124 stack_reserved_B=12288
+I (18427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (18429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (18431) WK_RT: BP SBP=134.47 DBP=70.80 Q=0.73 process=396870us end_to_end=396954us (397 ticks, 397ms) ref=0
+I (19424) WK_RT: PROFILE status=output_ready n=12 sample=4500 time_us=397142 avg_us=393083 max_us=398000 over_hop=0 latency_us=397256 queue=99
+I (19426) WK_RT: RAM stack_peak_since_start_B=3124 stack_reserved_B=12288
+I (19427) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (19429) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (19431) WK_RT: BP SBP=134.72 DBP=71.41 Q=0.74 process=397142us end_to_end=397256us (398 ticks, 398ms) ref=0
+I (20421) WK_RT: PROFILE status=output_ready n=13 sample=4750 time_us=394846 avg_us=393218 max_us=398000 over_hop=0 latency_us=394928 queue=98
+I (20424) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (20425) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (20427) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (20429) WK_RT: BP SBP=135.63 DBP=71.87 Q=0.74 process=394846us end_to_end=394928us (395 ticks, 395ms) ref=0
+I (21423) WK_RT: PROFILE status=output_ready n=14 sample=5000 time_us=396888 avg_us=393481 max_us=398000 over_hop=0 latency_us=396974 queue=99
+I (21426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (21427) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (21429) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (21431) WK_RT: BP SBP=135.61 DBP=71.98 Q=0.73 process=396888us end_to_end=396974us (397 ticks, 397ms) ref=0
+I (22423) WK_RT: PROFILE status=output_ready n=15 sample=5250 time_us=396359 avg_us=393672 max_us=398000 over_hop=0 latency_us=396443 queue=99
+I (22426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (22427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (22428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (22430) WK_RT: BP SBP=135.45 DBP=71.94 Q=0.65 process=396359us end_to_end=396443us (397 ticks, 397ms) ref=0
+I (23423) WK_RT: PROFILE status=output_ready n=16 sample=5500 time_us=396058 avg_us=393821 max_us=398000 over_hop=0 latency_us=396143 queue=99
+I (23425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (23426) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (23428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (23430) WK_RT: BP SBP=135.54 DBP=71.46 Q=0.74 process=396058us end_to_end=396143us (396 ticks, 396ms) ref=0
+I (24425) WK_RT: PROFILE status=output_ready n=17 sample=5750 time_us=398690 avg_us=394108 max_us=398690 over_hop=0 latency_us=398773 queue=99
+I (24428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (24429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (24431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (24433) WK_RT: BP SBP=135.51 DBP=71.30 Q=0.78 process=398690us end_to_end=398773us (399 ticks, 399ms) ref=0
+I (25423) WK_RT: PROFILE status=output_ready n=18 sample=6000 time_us=396937 avg_us=394265 max_us=398690 over_hop=0 latency_us=397019 queue=99
+I (25426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (25427) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (25429) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (25431) WK_RT: BP SBP=135.47 DBP=71.46 Q=0.81 process=396937us end_to_end=397019us (397 ticks, 397ms) ref=0
+I (26423) WK_RT: PROFILE status=output_ready n=19 sample=6250 time_us=396128 avg_us=394363 max_us=398690 over_hop=0 latency_us=396208 queue=99
+I (26425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (26427) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (26428) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (26431) WK_RT: BP SBP=135.32 DBP=71.45 Q=0.78 process=396128us end_to_end=396208us (397 ticks, 397ms) ref=0
+I (27423) WK_RT: PROFILE status=output_ready n=20 sample=6500 time_us=396352 avg_us=394462 max_us=398690 over_hop=0 latency_us=396437 queue=99
+I (27426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (27427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (27428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (27431) WK_RT: BP SBP=135.39 DBP=71.64 Q=0.78 process=396352us end_to_end=396437us (397 ticks, 397ms) ref=0
+I (28422) WK_RT: PROFILE status=output_ready n=21 sample=6750 time_us=395438 avg_us=394509 max_us=398690 over_hop=0 latency_us=395520 queue=98
+I (28425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (28426) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (28427) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (28430) WK_RT: BP SBP=135.72 DBP=72.17 Q=0.77 process=395438us end_to_end=395520us (396 ticks, 396ms) ref=0
+I (29423) WK_RT: PROFILE status=output_ready n=22 sample=7000 time_us=396539 avg_us=394601 max_us=398690 over_hop=0 latency_us=396627 queue=99
+I (29426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (29427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (29428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (29431) WK_RT: BP SBP=136.02 DBP=72.39 Q=0.62 process=396539us end_to_end=396627us (397 ticks, 397ms) ref=0
+I (30423) WK_RT: PROFILE status=output_ready n=23 sample=7250 time_us=396729 avg_us=394694 max_us=398690 over_hop=0 latency_us=396811 queue=99
+I (30426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (30427) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (30429) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (30431) WK_RT: BP SBP=135.38 DBP=72.08 Q=0.64 process=396729us end_to_end=396811us (397 ticks, 397ms) ref=0
+I (31423) WK_RT: PROFILE status=output_ready n=24 sample=7500 time_us=396099 avg_us=394752 max_us=398690 over_hop=0 latency_us=396181 queue=99
+I (31426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (31427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (31428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (31430) WK_RT: BP SBP=134.48 DBP=71.54 Q=0.65 process=396099us end_to_end=396181us (397 ticks, 397ms) ref=0
+I (32425) WK_RT: PROFILE status=output_ready n=25 sample=7750 time_us=398844 avg_us=394916 max_us=398844 over_hop=0 latency_us=398926 queue=99
+I (32428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (32429) WK_RT: RAM system_window internal_used_peak_bound_B=207228 psram_used_peak_bound_B=120752
+I (32431) WK_RT: RAM system_window internal_min_free_B=195647 psram_min_free_B=8267856 internal_extra_peak_bound_B=852 psram_extra_peak_bound_B=28
+I (32433) WK_RT: BP SBP=134.66 DBP=71.64 Q=0.71 process=398844us end_to_end=398926us (399 ticks, 399ms) ref=0
+I (33425) WK_RT: PROFILE status=output_ready n=26 sample=8000 time_us=398847 avg_us=395067 max_us=398847 over_hop=0 latency_us=398931 queue=99
+I (33428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (33429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (33431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (33433) WK_RT: BP SBP=134.69 DBP=71.92 Q=0.80 process=398847us end_to_end=398931us (399 ticks, 399ms) ref=0
+I (34422) WK_RT: PROFILE status=output_ready n=27 sample=8250 time_us=395694 avg_us=395090 max_us=398847 over_hop=0 latency_us=395776 queue=98
+I (34425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (34426) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (34428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (34430) WK_RT: BP SBP=135.25 DBP=72.31 Q=0.81 process=395694us end_to_end=395776us (396 ticks, 396ms) ref=0
+I (35422) WK_RT: PROFILE status=output_ready n=28 sample=8500 time_us=395815 avg_us=395116 max_us=398847 over_hop=0 latency_us=395896 queue=98
+I (35425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (35426) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (35428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (35430) WK_RT: BP SBP=135.27 DBP=72.14 Q=0.78 process=395815us end_to_end=395896us (396 ticks, 396ms) ref=0
+I (36422) WK_RT: PROFILE status=output_ready n=29 sample=8750 time_us=395663 avg_us=395135 max_us=398847 over_hop=0 latency_us=395746 queue=98
+I (36425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (36426) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (36428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (36430) WK_RT: BP SBP=135.50 DBP=72.00 Q=0.79 process=395663us end_to_end=395746us (396 ticks, 396ms) ref=0
+I (37424) WK_RT: PROFILE status=output_ready n=30 sample=9000 time_us=397670 avg_us=395219 max_us=398847 over_hop=0 latency_us=397753 queue=99
+I (37427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (37428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (37430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (37432) WK_RT: BP SBP=136.02 DBP=72.16 Q=0.82 process=397670us end_to_end=397753us (398 ticks, 398ms) ref=0
+I (38422) WK_RT: PROFILE status=output_ready n=31 sample=9250 time_us=395740 avg_us=395236 max_us=398847 over_hop=0 latency_us=395832 queue=98
+I (38425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (38427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (38429) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (38431) WK_RT: BP SBP=135.60 DBP=72.04 Q=0.62 process=395740us end_to_end=395832us (396 ticks, 396ms) ref=0
+I (39423) WK_RT: PROFILE status=output_ready n=32 sample=9500 time_us=396718 avg_us=395282 max_us=398847 over_hop=0 latency_us=396801 queue=99
+I (39426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (39427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (39429) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (39431) WK_RT: BP SBP=135.59 DBP=72.13 Q=0.65 process=396718us end_to_end=396801us (397 ticks, 397ms) ref=0
+I (40423) WK_RT: PROFILE status=output_ready n=33 sample=9750 time_us=396226 avg_us=395311 max_us=398847 over_hop=0 latency_us=396309 queue=99
+I (40426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (40427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (40428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (40430) WK_RT: BP SBP=135.16 DBP=72.34 Q=0.77 process=396226us end_to_end=396309us (397 ticks, 397ms) ref=0
+I (41424) WK_RT: PROFILE status=output_ready n=34 sample=10000 time_us=397677 avg_us=395381 max_us=398847 over_hop=0 latency_us=397757 queue=99
+I (41427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (41428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (41430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (41432) WK_RT: BP SBP=135.88 DBP=72.74 Q=0.46 process=397677us end_to_end=397757us (398 ticks, 398ms) ref=0
+I (42057) WK_RT: PROFILE status=signal_rejected n=2 sample=10250 time_us=30667 avg_us=30698 max_us=30729 over_hop=0 latency_us=30750 queue=7
+I (42060) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (42061) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (42063) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (42065) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=30667us
+I (43058) WK_RT: PROFILE status=signal_rejected n=3 sample=10500 time_us=31036 avg_us=30810 max_us=31036 over_hop=0 latency_us=31116 queue=7
+I (43060) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (43062) WK_RT: RAM system_window internal_used_peak_bound_B=206392 psram_used_peak_bound_B=120752
+I (43063) WK_RT: RAM system_window internal_min_free_B=196483 psram_min_free_B=8267856 internal_extra_peak_bound_B=16 psram_extra_peak_bound_B=28
+W (43065) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=31036us
+I (44386) WK_RT: PROFILE status=physiology_error n=2 sample=10750 time_us=359657 avg_us=347751 max_us=359657 over_hop=0 latency_us=359739 queue=89
+I (44389) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (44390) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (44392) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+E (44394) WK_RT: pipeline error: ESP_ERR_INVALID_ARG
+W (44395) WK_RT: window rejected: physiology_error (ok), process=359657us
+I (45423) WK_RT: PROFILE status=output_ready n=35 sample=11000 time_us=396343 avg_us=395408 max_us=398847 over_hop=0 latency_us=396423 queue=99
+I (45426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (45427) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (45428) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (45431) WK_RT: BP SBP=135.77 DBP=72.94 Q=0.36 process=396343us end_to_end=396423us (396 ticks, 396ms) ref=0
+I (46426) WK_RT: PROFILE status=output_ready n=36 sample=11250 time_us=399255 avg_us=395515 max_us=399255 over_hop=0 latency_us=399339 queue=99
+I (46429) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (46430) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (46431) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (46434) WK_RT: BP SBP=135.80 DBP=73.02 Q=0.65 process=399255us end_to_end=399339us (399 ticks, 399ms) ref=0
+I (47424) WK_RT: PROFILE status=output_ready n=37 sample=11500 time_us=396853 avg_us=395551 max_us=399255 over_hop=0 latency_us=396935 queue=99
+I (47426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (47427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (47429) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (47431) WK_RT: BP SBP=135.86 DBP=73.45 Q=0.78 process=396853us end_to_end=396935us (396 ticks, 396ms) ref=0
+I (48423) WK_RT: PROFILE status=output_ready n=38 sample=11750 time_us=396373 avg_us=395573 max_us=399255 over_hop=0 latency_us=396456 queue=99
+I (48426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (48427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (48428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (48431) WK_RT: BP SBP=135.03 DBP=73.00 Q=0.74 process=396373us end_to_end=396456us (396 ticks, 396ms) ref=0
+I (49423) WK_RT: PROFILE status=output_ready n=39 sample=12000 time_us=396342 avg_us=395592 max_us=399255 over_hop=0 latency_us=396430 queue=99
+I (49426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (49427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (49428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (49431) WK_RT: BP SBP=135.16 DBP=73.28 Q=0.76 process=396342us end_to_end=396430us (396 ticks, 396ms) ref=0
+I (50423) WK_RT: PROFILE status=output_ready n=40 sample=12250 time_us=395946 avg_us=395601 max_us=399255 over_hop=0 latency_us=396031 queue=99
+I (50426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (50427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (50428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (50430) WK_RT: BP SBP=135.16 DBP=73.14 Q=0.45 process=395946us end_to_end=396031us (396 ticks, 396ms) ref=0
+I (51421) WK_RT: PROFILE status=output_ready n=41 sample=12500 time_us=394237 avg_us=395568 max_us=399255 over_hop=0 latency_us=394325 queue=98
+I (51424) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (51425) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (51426) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (51428) WK_RT: BP SBP=135.96 DBP=73.09 Q=0.43 process=394237us end_to_end=394325us (394 ticks, 394ms) ref=0
+I (52422) WK_RT: PROFILE status=output_ready n=42 sample=12750 time_us=395213 avg_us=395559 max_us=399255 over_hop=0 latency_us=395298 queue=98
+I (52425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (52426) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (52427) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (52430) WK_RT: BP SBP=135.98 DBP=73.40 Q=0.37 process=395213us end_to_end=395298us (395 ticks, 395ms) ref=0
+I (53057) WK_RT: PROFILE status=signal_rejected n=4 sample=13000 time_us=30558 avg_us=30747 max_us=31036 over_hop=0 latency_us=30643 queue=7
+I (53060) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (53061) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (53063) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (53064) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=30558us
+I (54386) WK_RT: PROFILE status=physiology_error n=3 sample=13250 time_us=359423 avg_us=351642 max_us=359657 over_hop=0 latency_us=359505 queue=89
+I (54389) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (54390) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (54392) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+E (54394) WK_RT: pipeline error: ESP_ERR_INVALID_ARG
+W (54395) WK_RT: window rejected: physiology_error (ok), process=359423us
+I (55423) WK_RT: PROFILE status=output_ready n=43 sample=13500 time_us=395939 avg_us=395568 max_us=399255 over_hop=0 latency_us=396051 queue=99
+I (55426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (55427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (55428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (55431) WK_RT: BP SBP=135.78 DBP=73.37 Q=0.47 process=395939us end_to_end=396051us (396 ticks, 396ms) ref=0
+I (56421) WK_RT: PROFILE status=output_ready n=44 sample=13750 time_us=394574 avg_us=395546 max_us=399255 over_hop=0 latency_us=394656 queue=98
+I (56424) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (56425) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (56427) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (56429) WK_RT: BP SBP=135.48 DBP=72.93 Q=0.48 process=394574us end_to_end=394656us (394 ticks, 394ms) ref=0
+I (57423) WK_RT: PROFILE status=output_ready n=45 sample=14000 time_us=396176 avg_us=395560 max_us=399255 over_hop=0 latency_us=396265 queue=99
+I (57426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (57427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (57429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (57431) WK_RT: BP SBP=135.60 DBP=73.31 Q=0.43 process=396176us end_to_end=396265us (396 ticks, 396ms) ref=0
+I (58422) WK_RT: PROFILE status=output_ready n=46 sample=14250 time_us=395440 avg_us=395557 max_us=399255 over_hop=0 latency_us=395522 queue=98
+I (58425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (58426) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (58428) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (58430) WK_RT: BP SBP=135.39 DBP=73.06 Q=0.44 process=395440us end_to_end=395522us (395 ticks, 395ms) ref=0
+I (59425) WK_RT: PROFILE status=output_ready n=47 sample=14500 time_us=398579 avg_us=395621 max_us=399255 over_hop=0 latency_us=398661 queue=99
+I (59428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (59429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (59431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (59433) WK_RT: BP SBP=135.23 DBP=72.94 Q=0.44 process=398579us end_to_end=398661us (398 ticks, 398ms) ref=0
+I (60423) WK_RT: PROFILE status=output_ready n=48 sample=14750 time_us=395878 avg_us=395627 max_us=399255 over_hop=0 latency_us=395961 queue=99
+I (60426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (60427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (60428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (60430) WK_RT: BP SBP=135.16 DBP=72.99 Q=0.42 process=395878us end_to_end=395961us (396 ticks, 396ms) ref=0
+I (61423) WK_RT: PROFILE status=output_ready n=49 sample=15000 time_us=396399 avg_us=395642 max_us=399255 over_hop=0 latency_us=396484 queue=99
+I (61426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (61427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (61429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (61431) WK_RT: BP SBP=134.82 DBP=72.83 Q=0.81 process=396399us end_to_end=396484us (396 ticks, 396ms) ref=0
+I (62423) WK_RT: PROFILE status=output_ready n=50 sample=15250 time_us=396331 avg_us=395656 max_us=399255 over_hop=0 latency_us=396414 queue=99
+I (62426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (62427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (62429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (62431) WK_RT: BP SBP=135.31 DBP=73.29 Q=0.81 process=396331us end_to_end=396414us (396 ticks, 396ms) ref=0
+I (63423) WK_RT: PROFILE status=output_ready n=51 sample=15500 time_us=396312 avg_us=395669 max_us=399255 over_hop=0 latency_us=396400 queue=99
+I (63426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (63427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (63429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (63431) WK_RT: BP SBP=136.25 DBP=73.46 Q=0.67 process=396312us end_to_end=396400us (396 ticks, 396ms) ref=0
+I (64423) WK_RT: PROFILE status=output_ready n=52 sample=15750 time_us=395759 avg_us=395671 max_us=399255 over_hop=0 latency_us=395889 queue=99
+I (64426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (64427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (64428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (64430) WK_RT: BP SBP=135.88 DBP=73.17 Q=0.62 process=395759us end_to_end=395889us (396 ticks, 396ms) ref=0
+I (65423) WK_RT: PROFILE status=output_ready n=53 sample=16000 time_us=396104 avg_us=395679 max_us=399255 over_hop=0 latency_us=396186 queue=99
+I (65426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (65427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (65429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (65431) WK_RT: BP SBP=135.75 DBP=72.98 Q=0.79 process=396104us end_to_end=396186us (396 ticks, 396ms) ref=0
+I (66424) WK_RT: PROFILE status=output_ready n=54 sample=16250 time_us=397179 avg_us=395707 max_us=399255 over_hop=0 latency_us=397262 queue=99
+I (66427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (66428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (66429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (66432) WK_RT: BP SBP=135.94 DBP=73.13 Q=0.79 process=397179us end_to_end=397262us (397 ticks, 397ms) ref=0
+I (67425) WK_RT: PROFILE status=output_ready n=55 sample=16500 time_us=397687 avg_us=395743 max_us=399255 over_hop=0 latency_us=397771 queue=99
+I (67427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (67429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (67430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (67432) WK_RT: BP SBP=135.23 DBP=72.93 Q=0.80 process=397687us end_to_end=397771us (397 ticks, 397ms) ref=0
+I (68422) WK_RT: PROFILE status=output_ready n=56 sample=16750 time_us=395544 avg_us=395739 max_us=399255 over_hop=0 latency_us=395639 queue=98
+I (68425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (68426) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (68428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (68431) WK_RT: BP SBP=135.18 DBP=72.84 Q=0.76 process=395544us end_to_end=395639us (395 ticks, 395ms) ref=0
+I (69423) WK_RT: PROFILE status=output_ready n=57 sample=17000 time_us=395799 avg_us=395740 max_us=399255 over_hop=0 latency_us=395883 queue=98
+I (69425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (69427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (69428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (69430) WK_RT: BP SBP=135.14 DBP=72.84 Q=0.81 process=395799us end_to_end=395883us (396 ticks, 396ms) ref=0
+I (70423) WK_RT: PROFILE status=output_ready n=58 sample=17250 time_us=396134 avg_us=395747 max_us=399255 over_hop=0 latency_us=396216 queue=99
+I (70426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (70427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (70428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (70431) WK_RT: BP SBP=136.31 DBP=73.28 Q=0.66 process=396134us end_to_end=396216us (396 ticks, 396ms) ref=0
+I (71425) WK_RT: PROFILE status=output_ready n=59 sample=17500 time_us=398443 avg_us=395793 max_us=399255 over_hop=0 latency_us=398523 queue=99
+I (71428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (71429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (71431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (71433) WK_RT: BP SBP=136.40 DBP=73.43 Q=0.65 process=398443us end_to_end=398523us (398 ticks, 398ms) ref=0
+I (72419) WK_RT: PROFILE status=output_ready n=60 sample=17750 time_us=392558 avg_us=395739 max_us=399255 over_hop=0 latency_us=392646 queue=98
+I (72422) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (72423) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (72425) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (72427) WK_RT: BP SBP=136.57 DBP=74.17 Q=0.59 process=392558us end_to_end=392646us (392 ticks, 392ms) ref=0
+I (73425) WK_RT: PROFILE status=output_ready n=61 sample=18000 time_us=397650 avg_us=395770 max_us=399255 over_hop=0 latency_us=397736 queue=99
+I (73427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (73428) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (73430) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (73432) WK_RT: BP SBP=135.39 DBP=73.15 Q=0.82 process=397650us end_to_end=397736us (397 ticks, 397ms) ref=0
+I (74426) WK_RT: PROFILE status=output_ready n=62 sample=18250 time_us=398900 avg_us=395821 max_us=399255 over_hop=0 latency_us=398990 queue=99
+I (74429) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (74430) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (74431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (74434) WK_RT: BP SBP=135.46 DBP=73.42 Q=0.80 process=398900us end_to_end=398990us (399 ticks, 399ms) ref=0
+I (75424) WK_RT: PROFILE status=output_ready n=63 sample=18500 time_us=397411 avg_us=395846 max_us=399255 over_hop=0 latency_us=397493 queue=99
+I (75427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (75428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (75430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (75432) WK_RT: BP SBP=135.81 DBP=73.75 Q=0.81 process=397411us end_to_end=397493us (397 ticks, 397ms) ref=0
+I (76422) WK_RT: PROFILE status=output_ready n=64 sample=18750 time_us=395387 avg_us=395839 max_us=399255 over_hop=0 latency_us=395469 queue=98
+I (76425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (76426) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (76428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (76430) WK_RT: BP SBP=135.82 DBP=73.51 Q=0.79 process=395387us end_to_end=395469us (395 ticks, 395ms) ref=0
+I (77423) WK_RT: PROFILE status=output_ready n=65 sample=19000 time_us=395782 avg_us=395838 max_us=399255 over_hop=0 latency_us=395864 queue=98
+I (77425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (77427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (77428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (77430) WK_RT: BP SBP=135.69 DBP=73.14 Q=0.82 process=395782us end_to_end=395864us (396 ticks, 396ms) ref=0
+I (78427) WK_RT: PROFILE status=output_ready n=66 sample=19250 time_us=399888 avg_us=395899 max_us=399888 over_hop=0 latency_us=399970 queue=100
+I (78430) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (78431) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (78433) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (78435) WK_RT: BP SBP=135.94 DBP=73.30 Q=0.68 process=399888us end_to_end=399970us (400 ticks, 400ms) ref=0
+I (79425) WK_RT: PROFILE status=output_ready n=67 sample=19500 time_us=397683 avg_us=395926 max_us=399888 over_hop=0 latency_us=397769 queue=99
+I (79427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (79428) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (79430) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (79432) WK_RT: BP SBP=136.76 DBP=73.76 Q=0.71 process=397683us end_to_end=397769us (398 ticks, 398ms) ref=0
+I (80421) WK_RT: PROFILE status=output_ready n=68 sample=19750 time_us=394036 avg_us=395898 max_us=399888 over_hop=0 latency_us=394119 queue=98
+I (80424) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (80425) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (80426) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (80428) WK_RT: BP SBP=135.84 DBP=73.01 Q=0.85 process=394036us end_to_end=394119us (394 ticks, 394ms) ref=0
+I (81423) WK_RT: PROFILE status=output_ready n=69 sample=20000 time_us=396176 avg_us=395902 max_us=399888 over_hop=0 latency_us=396297 queue=99
+I (81426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (81427) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (81429) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (81431) WK_RT: BP SBP=135.70 DBP=72.90 Q=0.84 process=396176us end_to_end=396297us (396 ticks, 396ms) ref=0
+I (82423) WK_RT: PROFILE status=output_ready n=70 sample=20250 time_us=395796 avg_us=395900 max_us=399888 over_hop=0 latency_us=395878 queue=98
+I (82425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (82427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (82428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (82430) WK_RT: BP SBP=137.88 DBP=74.38 Q=0.69 process=395796us end_to_end=395878us (396 ticks, 396ms) ref=0
+I (83425) WK_RT: PROFILE status=output_ready n=71 sample=20500 time_us=398140 avg_us=395932 max_us=399888 over_hop=0 latency_us=398223 queue=99
+I (83428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (83429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (83430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (83432) WK_RT: BP SBP=137.76 DBP=73.60 Q=0.83 process=398140us end_to_end=398223us (398 ticks, 398ms) ref=0
+I (84424) WK_RT: PROFILE status=output_ready n=72 sample=20750 time_us=397208 avg_us=395950 max_us=399888 over_hop=0 latency_us=397293 queue=99
+I (84427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (84428) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (84429) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (84432) WK_RT: BP SBP=137.45 DBP=73.60 Q=0.81 process=397208us end_to_end=397293us (397 ticks, 397ms) ref=0
+I (85423) WK_RT: PROFILE status=output_ready n=73 sample=21000 time_us=395994 avg_us=395950 max_us=399888 over_hop=0 latency_us=396080 queue=99
+I (85426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (85427) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (85429) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (85432) WK_RT: BP SBP=137.50 DBP=73.76 Q=0.79 process=395994us end_to_end=396080us (396 ticks, 396ms) ref=0
+I (86424) WK_RT: PROFILE status=output_ready n=74 sample=21250 time_us=396668 avg_us=395960 max_us=399888 over_hop=0 latency_us=396748 queue=99
+I (86426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (86427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (86429) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (86431) WK_RT: BP SBP=137.06 DBP=73.54 Q=0.45 process=396668us end_to_end=396748us (397 ticks, 397ms) ref=0
+I (87424) WK_RT: PROFILE status=output_ready n=75 sample=21500 time_us=396896 avg_us=395972 max_us=399888 over_hop=0 latency_us=396982 queue=99
+I (87426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (87428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (87429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (87431) WK_RT: BP SBP=137.58 DBP=74.03 Q=0.47 process=396896us end_to_end=396982us (397 ticks, 397ms) ref=0
+I (88422) WK_RT: PROFILE status=output_ready n=76 sample=21750 time_us=395449 avg_us=395966 max_us=399888 over_hop=0 latency_us=395531 queue=98
+I (88425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (88426) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (88428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (88430) WK_RT: BP SBP=138.23 DBP=74.54 Q=0.47 process=395449us end_to_end=395531us (395 ticks, 395ms) ref=0
+I (89425) WK_RT: PROFILE status=output_ready n=77 sample=22000 time_us=397780 avg_us=395989 max_us=399888 over_hop=0 latency_us=397864 queue=99
+I (89428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (89429) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (89430) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (89432) WK_RT: BP SBP=138.89 DBP=74.93 Q=0.46 process=397780us end_to_end=397864us (398 ticks, 398ms) ref=0
+I (90423) WK_RT: PROFILE status=output_ready n=78 sample=22250 time_us=396204 avg_us=395992 max_us=399888 over_hop=0 latency_us=396286 queue=99
+I (90426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (90427) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (90429) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (90431) WK_RT: BP SBP=137.26 DBP=73.79 Q=0.77 process=396204us end_to_end=396286us (396 ticks, 396ms) ref=0
+I (91424) WK_RT: PROFILE status=output_ready n=79 sample=22500 time_us=396608 avg_us=396000 max_us=399888 over_hop=0 latency_us=396688 queue=99
+I (91426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (91427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (91429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (91431) WK_RT: BP SBP=137.35 DBP=74.11 Q=0.73 process=396608us end_to_end=396688us (397 ticks, 397ms) ref=0
+I (92426) WK_RT: PROFILE status=output_ready n=80 sample=22750 time_us=399274 avg_us=396041 max_us=399888 over_hop=0 latency_us=399358 queue=99
+I (92429) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (92430) WK_RT: RAM system_window internal_used_peak_bound_B=207228 psram_used_peak_bound_B=120752
+I (92432) WK_RT: RAM system_window internal_min_free_B=195647 psram_min_free_B=8267856 internal_extra_peak_bound_B=852 psram_extra_peak_bound_B=28
+I (92434) WK_RT: BP SBP=137.16 DBP=74.05 Q=0.75 process=399274us end_to_end=399358us (399 ticks, 399ms) ref=0
+I (93425) WK_RT: PROFILE status=output_ready n=81 sample=23000 time_us=398268 avg_us=396068 max_us=399888 over_hop=0 latency_us=398352 queue=99
+I (93428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (93429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (93431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (93433) WK_RT: BP SBP=137.60 DBP=74.60 Q=0.74 process=398268us end_to_end=398352us (398 ticks, 398ms) ref=0
+I (94424) WK_RT: PROFILE status=output_ready n=82 sample=23250 time_us=396814 avg_us=396077 max_us=399888 over_hop=0 latency_us=396899 queue=99
+I (94426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (94427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (94429) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (94431) WK_RT: BP SBP=137.01 DBP=74.70 Q=0.78 process=396814us end_to_end=396899us (397 ticks, 397ms) ref=0
+I (95424) WK_RT: PROFILE status=output_ready n=83 sample=23500 time_us=397155 avg_us=396090 max_us=399888 over_hop=0 latency_us=397241 queue=99
+I (95427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (95428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (95429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (95432) WK_RT: BP SBP=137.46 DBP=75.27 Q=0.78 process=397155us end_to_end=397241us (397 ticks, 397ms) ref=0
+I (96426) WK_RT: PROFILE status=output_ready n=84 sample=23750 time_us=398655 avg_us=396121 max_us=399888 over_hop=0 latency_us=398735 queue=99
+I (96428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (96430) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (96431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (96434) WK_RT: BP SBP=137.71 DBP=75.22 Q=0.80 process=398655us end_to_end=398735us (399 ticks, 399ms) ref=0
+I (97426) WK_RT: PROFILE status=output_ready n=85 sample=24000 time_us=398533 avg_us=396149 max_us=399888 over_hop=0 latency_us=398619 queue=99
+I (97428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (97430) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (97431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (97433) WK_RT: BP SBP=137.44 DBP=75.21 Q=0.47 process=398533us end_to_end=398619us (399 ticks, 399ms) ref=0
+I (98424) WK_RT: PROFILE status=output_ready n=86 sample=24250 time_us=397196 avg_us=396161 max_us=399888 over_hop=0 latency_us=397304 queue=99
+I (98427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (98428) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (98430) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (98432) WK_RT: BP SBP=137.11 DBP=75.33 Q=0.41 process=397196us end_to_end=397304us (397 ticks, 397ms) ref=0
+I (99424) WK_RT: PROFILE status=output_ready n=87 sample=24500 time_us=397400 avg_us=396175 max_us=399888 over_hop=0 latency_us=397482 queue=99
+I (99427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (99428) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (99430) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (99432) WK_RT: BP SBP=136.41 DBP=75.08 Q=0.36 process=397400us end_to_end=397482us (397 ticks, 397ms) ref=0
+I (100424) WK_RT: PROFILE status=output_ready n=88 sample=24750 time_us=396964 avg_us=396184 max_us=399888 over_hop=0 latency_us=397052 queue=99
+I (100427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (100428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (100430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (100432) WK_RT: BP SBP=136.24 DBP=74.85 Q=0.41 process=396964us end_to_end=397052us (397 ticks, 397ms) ref=0
+I (101425) WK_RT: PROFILE status=output_ready n=89 sample=25000 time_us=397746 avg_us=396202 max_us=399888 over_hop=0 latency_us=397826 queue=99
+I (101428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (101429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (101430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (101432) WK_RT: BP SBP=136.69 DBP=75.44 Q=0.40 process=397746us end_to_end=397826us (398 ticks, 398ms) ref=0
+I (102422) WK_RT: PROFILE status=output_ready n=90 sample=25250 time_us=394701 avg_us=396185 max_us=399888 over_hop=0 latency_us=394789 queue=98
+I (102425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (102426) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (102427) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (102430) WK_RT: BP SBP=136.11 DBP=74.91 Q=0.68 process=394701us end_to_end=394789us (395 ticks, 395ms) ref=0
+I (103421) WK_RT: PROFILE status=output_ready n=91 sample=25500 time_us=393873 avg_us=396160 max_us=399888 over_hop=0 latency_us=393964 queue=98
+I (103424) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (103425) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (103426) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (103428) WK_RT: BP SBP=135.68 DBP=74.71 Q=0.63 process=393873us end_to_end=393964us (394 ticks, 394ms) ref=0
+I (104425) WK_RT: PROFILE status=output_ready n=92 sample=25750 time_us=397937 avg_us=396179 max_us=399888 over_hop=0 latency_us=398028 queue=99
+I (104428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (104429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (104430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (104432) WK_RT: BP SBP=135.46 DBP=74.46 Q=0.74 process=397937us end_to_end=398028us (398 ticks, 398ms) ref=0
+I (105425) WK_RT: PROFILE status=output_ready n=93 sample=26000 time_us=398217 avg_us=396201 max_us=399888 over_hop=0 latency_us=398306 queue=99
+I (105428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (105429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (105431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (105433) WK_RT: BP SBP=135.74 DBP=74.42 Q=0.76 process=398217us end_to_end=398306us (398 ticks, 398ms) ref=0
+I (106424) WK_RT: PROFILE status=output_ready n=94 sample=26250 time_us=396508 avg_us=396204 max_us=399888 over_hop=0 latency_us=396594 queue=99
+I (106427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (106428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (106429) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (106432) WK_RT: BP SBP=135.37 DBP=74.19 Q=0.79 process=396508us end_to_end=396594us (397 ticks, 397ms) ref=0
+I (107423) WK_RT: PROFILE status=output_ready n=95 sample=26500 time_us=396185 avg_us=396204 max_us=399888 over_hop=0 latency_us=396272 queue=99
+I (107426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (107427) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (107429) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+I (107431) WK_RT: BP SBP=135.77 DBP=74.53 Q=0.78 process=396185us end_to_end=396272us (396 ticks, 396ms) ref=0
+I (108423) WK_RT: PROFILE status=output_ready n=96 sample=26750 time_us=395532 avg_us=396197 max_us=399888 over_hop=0 latency_us=395620 queue=98
+I (108425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (108427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (108428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (108431) WK_RT: BP SBP=137.17 DBP=74.91 Q=0.47 process=395532us end_to_end=395620us (396 ticks, 396ms) ref=0
+I (109424) WK_RT: PROFILE status=output_ready n=97 sample=27000 time_us=396915 avg_us=396204 max_us=399888 over_hop=0 latency_us=397003 queue=99
+I (109427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (109428) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (109430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (109432) WK_RT: BP SBP=137.02 DBP=74.63 Q=0.44 process=396915us end_to_end=397003us (397 ticks, 397ms) ref=0
+I (110422) WK_RT: PROFILE status=output_ready n=98 sample=27250 time_us=395311 avg_us=396195 max_us=399888 over_hop=0 latency_us=395397 queue=98
+I (110425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (110427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (110428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (110430) WK_RT: BP SBP=137.01 DBP=74.45 Q=0.40 process=395311us end_to_end=395397us (395 ticks, 395ms) ref=0
+I (111424) WK_RT: PROFILE status=output_ready n=99 sample=27500 time_us=397118 avg_us=396205 max_us=399888 over_hop=0 latency_us=397243 queue=99
+I (111427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (111428) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (111430) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (111432) WK_RT: BP SBP=137.75 DBP=75.32 Q=0.39 process=397118us end_to_end=397243us (397 ticks, 397ms) ref=0
+I (112423) WK_RT: PROFILE status=output_ready n=100 sample=27750 time_us=396187 avg_us=396204 max_us=399888 over_hop=0 latency_us=396277 queue=99
+I (112426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (112427) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (112429) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (112431) WK_RT: BP SBP=137.79 DBP=75.03 Q=0.50 process=396187us end_to_end=396277us (396 ticks, 396ms) ref=0
+I (113424) WK_RT: PROFILE status=output_ready n=101 sample=28000 time_us=396698 avg_us=396209 max_us=399888 over_hop=0 latency_us=396780 queue=99
+I (113426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (113428) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (113429) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (113432) WK_RT: BP SBP=138.10 DBP=75.08 Q=0.49 process=396698us end_to_end=396780us (397 ticks, 397ms) ref=0
+I (114423) WK_RT: PROFILE status=output_ready n=102 sample=28250 time_us=395548 avg_us=396203 max_us=399888 over_hop=0 latency_us=395632 queue=98
+I (114426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (114427) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (114428) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (114431) WK_RT: BP SBP=139.69 DBP=76.08 Q=0.40 process=395548us end_to_end=395632us (396 ticks, 396ms) ref=0
+I (115424) WK_RT: PROFILE status=output_ready n=103 sample=28500 time_us=397157 avg_us=396212 max_us=399888 over_hop=0 latency_us=397253 queue=99
+I (115427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (115428) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (115430) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (115432) WK_RT: BP SBP=139.73 DBP=76.21 Q=0.41 process=397157us end_to_end=397253us (397 ticks, 397ms) ref=0
+I (116423) WK_RT: PROFILE status=output_ready n=104 sample=28750 time_us=396133 avg_us=396211 max_us=399888 over_hop=0 latency_us=396214 queue=99
+I (116426) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (116427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (116429) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (116431) WK_RT: BP SBP=139.27 DBP=75.79 Q=0.38 process=396133us end_to_end=396214us (396 ticks, 396ms) ref=0
+I (117426) WK_RT: PROFILE status=output_ready n=105 sample=29000 time_us=398742 avg_us=396235 max_us=399888 over_hop=0 latency_us=398830 queue=99
+I (117429) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (117430) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (117431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (117434) WK_RT: BP SBP=139.15 DBP=76.11 Q=0.38 process=398742us end_to_end=398830us (399 ticks, 399ms) ref=0
+I (118425) WK_RT: PROFILE status=output_ready n=106 sample=29250 time_us=397472 avg_us=396247 max_us=399888 over_hop=0 latency_us=397553 queue=99
+I (118427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (118429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (118430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (118432) WK_RT: BP SBP=138.92 DBP=75.99 Q=0.39 process=397472us end_to_end=397553us (398 ticks, 398ms) ref=0
+I (119424) WK_RT: PROFILE status=output_ready n=107 sample=29500 time_us=396979 avg_us=396254 max_us=399888 over_hop=0 latency_us=397061 queue=99
+I (119427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (119429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (119430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (119433) WK_RT: BP SBP=138.65 DBP=75.71 Q=0.39 process=396979us end_to_end=397061us (397 ticks, 397ms) ref=0
+I (120424) WK_RT: PROFILE status=output_ready n=108 sample=29750 time_us=396986 avg_us=396261 max_us=399888 over_hop=0 latency_us=397070 queue=99
+I (120427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (120428) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (120429) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (120432) WK_RT: BP SBP=137.98 DBP=75.30 Q=0.40 process=396986us end_to_end=397070us (397 ticks, 397ms) ref=0
+I (121425) WK_RT: PROFILE status=output_ready n=109 sample=30000 time_us=397410 avg_us=396271 max_us=399888 over_hop=0 latency_us=397492 queue=99
+I (121427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (121429) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (121430) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=480 psram_extra_peak_bound_B=28
+I (121432) WK_RT: BP SBP=137.93 DBP=76.00 Q=0.45 process=397410us end_to_end=397492us (398 ticks, 398ms) ref=0
+I (122427) WK_RT: PROFILE status=output_ready n=110 sample=30250 time_us=399222 avg_us=396298 max_us=399888 over_hop=0 latency_us=399330 queue=99
+I (122429) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (122431) WK_RT: RAM system_window internal_used_peak_bound_B=206856 psram_used_peak_bound_B=120752
+I (122432) WK_RT: RAM system_window internal_min_free_B=196019 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (122435) WK_RT: BP SBP=137.15 DBP=75.52 Q=0.77 process=399222us end_to_end=399330us (399 ticks, 399ms) ref=0
+I (123425) WK_RT: PROFILE status=output_ready n=111 sample=30500 time_us=397309 avg_us=396307 max_us=399888 over_hop=0 latency_us=397396 queue=99
+I (123427) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (123429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (123430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (123432) WK_RT: BP SBP=136.50 DBP=75.31 Q=0.82 process=397309us end_to_end=397396us (397 ticks, 397ms) ref=0
+I (124423) WK_RT: PROFILE status=output_ready n=112 sample=30750 time_us=395355 avg_us=396299 max_us=399888 over_hop=0 latency_us=395439 queue=98
+I (124425) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (124427) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (124428) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+I (124430) WK_RT: BP SBP=137.54 DBP=76.08 Q=0.58 process=395355us end_to_end=395439us (396 ticks, 396ms) ref=0
+I (125426) WK_RT: PROFILE status=output_ready n=113 sample=31000 time_us=398439 avg_us=396318 max_us=399888 over_hop=0 latency_us=398527 queue=99
+I (125428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (125430) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (125431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (125433) WK_RT: BP SBP=136.46 DBP=75.41 Q=0.37 process=398439us end_to_end=398527us (399 ticks, 399ms) ref=0
+I (126425) WK_RT: PROFILE status=output_ready n=114 sample=31250 time_us=397625 avg_us=396329 max_us=399888 over_hop=0 latency_us=397705 queue=99
+I (126428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (126429) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (126430) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (126432) WK_RT: BP SBP=136.27 DBP=75.23 Q=0.36 process=397625us end_to_end=397705us (398 ticks, 398ms) ref=0
+I (127426) WK_RT: PROFILE status=output_ready n=115 sample=31500 time_us=398406 avg_us=396347 max_us=399888 over_hop=0 latency_us=398492 queue=99
+I (127428) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (127430) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (127431) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (127433) WK_RT: BP SBP=136.23 DBP=75.26 Q=0.37 process=398406us end_to_end=398492us (399 ticks, 399ms) ref=0

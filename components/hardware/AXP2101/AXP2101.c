@@ -4,9 +4,12 @@
 
 #define AXP2101_REG_STATUS         0x00
 #define AXP2101_REG_COMMON         0x10
+#define AXP2101_REG_CHARGE_ENABLE  0x18
 #define AXP2101_REG_POWER_SOURCE   0x20
 #define AXP2101_REG_OFF_ENABLE     0x22
 #define AXP2101_REG_KEY_TIMING     0x27
+#define AXP2101_REG_TS_CONTROL     0x50
+#define AXP2101_REG_CHGLED_CONTROL 0x69
 #define AXP2101_REG_DCDC_ENABLE    0x80
 #define AXP2101_REG_DCDC1_VOLTAGE  0x82
 #define AXP2101_REG_LDO_ENABLE     0x90
@@ -66,6 +69,34 @@ esp_err_t AXP2101_Init(void)
         }
     }
     ESP_LOGE(TAG, "No communication at 100/10 kHz; power configuration skipped");
+    return err;
+}
+
+esp_err_t AXP2101_DisableCharging(void)
+{
+    if (!axp_ready) {
+        return ESP_ERR_INVALID_STATE;
+    }
+    /* Disable both cell and button-battery charging first. Preserve gauge and
+     * watchdog settings; do not alter the USB/system power path or BATFET.
+     * IIC_UpdateBits verifies the selected bits after writing.
+     */
+    esp_err_t err = IIC_UpdateBits(axp_device, AXP2101_REG_CHARGE_ENABLE, 0x06, 0x00);
+    if (err != ESP_OK) {
+        return err;
+    }
+    /* TS is unconnected on this board: external-input mode, current source off. */
+    err = IIC_UpdateBits(axp_device, AXP2101_REG_TS_CONTROL, 0x1C, 0x10);
+    if (err != ESP_OK) {
+        return err;
+    }
+    /* Software-controlled Hi-Z (LED off), with the CHGLED function enabled.
+     * This avoids depending on the factory Type A/Type B indication mode.
+     */
+    err = IIC_UpdateBits(axp_device, AXP2101_REG_CHGLED_CONTROL, 0x37, 0x05);
+    if (err == ESP_OK) {
+        ESP_LOGI(TAG, "Cell/button charging disabled; TS current off; CHGLED off (verified)");
+    }
     return err;
 }
 

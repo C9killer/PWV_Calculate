@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-19T10:19:10.723766+08:00",
+  "ended_at": "2026-10-19T10:21:10.737258+08:00",
+  "capture_seconds": 120.00256989998161,
+  "port": "COM22",
+  "baud": 921600,
+  "raw_bytes": 975454,
+  "text_log_records": 628,
+  "reset_requested": false,
+  "firmware_flashed": false,
+  "initial_pending_bytes_discarded": true,
+  "input_condition_user_reported": "human_signal_connected"
+}

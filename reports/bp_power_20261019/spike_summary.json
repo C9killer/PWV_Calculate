@@ -1,0 +1,280 @@
+{
+  "off": {
+    "source": {
+      "path": "C:\\Users\\T\\Desktop\\未加载血压计算数据.csv",
+      "filename": "未加载血压计算数据.csv",
+      "encoding": "gb18030",
+      "sha256": "e6f01efc3ffd8bd39ea1cb6941a5a0465226d8b761e7c313de64366d786db99b",
+      "rows": 15420,
+      "start_s": 0.0,
+      "end_s": 30.838,
+      "duration_s": 30.838,
+      "dt_ms_counts": {
+        "2.0": 15419
+      },
+      "missing_or_nonfinite_rows": 0,
+      "max_abs_power_minus_UI_W": 5.119999999969593e-06,
+      "energy_counter_decreases": 0
+    },
+    "peak_W": 1.87663,
+    "peak_current_A": 0.3901,
+    "voltage_median_at_P_above_1W_V": 4.8435,
+    "voltage_median_at_P_below_0_8W_V": 4.9123,
+    "current_median_at_P_above_1W_A": 0.3338,
+    "current_median_at_P_below_0_8W_A": 0.1301,
+    "current_voltage_correlation": -0.5461638820232204,
+    "thresholds": {
+      "1": {
+        "threshold_W": 1,
+        "event_count": 313,
+        "above_threshold_samples": 393,
+        "sample_fraction_pct": 2.6198253449770013,
+        "median_event_sample_span_ms": 2.0,
+        "max_event_sample_span_ms": 16.0,
+        "median_peak_interval_ms": 102.00000000000031,
+        "most_common_peak_intervals_ms": [
+          [
+            102,
+            114
+          ],
+          [
+            104,
+            87
+          ],
+          [
+            100,
+            49
+          ],
+          [
+            106,
+            16
+          ],
+          [
+            98,
+            12
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            96,
+            2
+          ],
+          [
+            42,
+            2
+          ],
+          [
+            8,
+            2
+          ]
+        ],
+        "phase_concentration_at_102_4_ms": 0.9214448809542188,
+        "phase_concentration_at_100_ms": 0.008441647906884505
+      },
+      "1.5": {
+        "threshold_W": 1.5,
+        "event_count": 221,
+        "above_threshold_samples": 253,
+        "sample_fraction_pct": 1.6865542297180187,
+        "median_event_sample_span_ms": 2.0,
+        "max_event_sample_span_ms": 6.0,
+        "median_peak_interval_ms": 103.9999999999992,
+        "most_common_peak_intervals_ms": [
+          [
+            102,
+            56
+          ],
+          [
+            104,
+            46
+          ],
+          [
+            204,
+            41
+          ],
+          [
+            100,
+            13
+          ],
+          [
+            308,
+            7
+          ],
+          [
+            206,
+            7
+          ],
+          [
+            98,
+            6
+          ],
+          [
+            106,
+            5
+          ],
+          [
+            202,
+            4
+          ],
+          [
+            306,
+            4
+          ]
+        ],
+        "phase_concentration_at_102_4_ms": 0.9103057504049895,
+        "phase_concentration_at_100_ms": 0.006045222499894216
+      }
+    },
+    "dominant_spike_train_frequency_5_to_15_Hz": 9.766015598960069,
+    "dominant_spike_train_period_ms": 102.39590443686008,
+    "largest_autocorrelation_80_to_130_ms": [
+      51,
+      0.417349813620566
+    ]
+  },
+  "on": {
+    "source": {
+      "path": "C:\\Users\\T\\Desktop\\运行血压数据.csv",
+      "filename": "运行血压数据.csv",
+      "encoding": "gb18030",
+      "sha256": "e9948a6311d0375298b4b9023eb2aee50ecd86f959d8a95be9096e15588ee6f3",
+      "rows": 16492,
+      "start_s": 0.0,
+      "end_s": 32.982,
+      "duration_s": 32.982,
+      "dt_ms_counts": {
+        "2.0": 16491
+      },
+      "missing_or_nonfinite_rows": 0,
+      "max_abs_power_minus_UI_W": 5.099999999869098e-06,
+      "energy_counter_decreases": 0
+    },
+    "peak_W": 1.94474,
+    "peak_current_A": 0.4011,
+    "voltage_median_at_P_above_1W_V": 4.8273,
+    "voltage_median_at_P_below_0_8W_V": 4.9111,
+    "current_median_at_P_above_1W_A": 0.3507,
+    "current_median_at_P_below_0_8W_A": 0.1316,
+    "current_voltage_correlation": -0.5706760174197884,
+    "thresholds": {
+      "1": {
+        "threshold_W": 1,
+        "event_count": 314,
+        "above_threshold_samples": 397,
+        "sample_fraction_pct": 2.6464902339844008,
+        "median_event_sample_span_ms": 2.0,
+        "max_event_sample_span_ms": 8.0,
+        "median_peak_interval_ms": 102.00000000000031,
+        "most_common_peak_intervals_ms": [
+          [
+            102,
+            103
+          ],
+          [
+            104,
+            100
+          ],
+          [
+            100,
+            55
+          ],
+          [
+            106,
+            12
+          ],
+          [
+            98,
+            8
+          ],
+          [
+            20,
+            5
+          ],
+          [
+            16,
+            3
+          ],
+          [
+            90,
+            3
+          ],
+          [
+            42,
+            2
+          ],
+          [
+            64,
+            2
+          ]
+        ],
+        "phase_concentration_at_102_4_ms": 0.9299362535541686,
+        "phase_concentration_at_100_ms": 0.008176834571575826
+      },
+      "1.5": {
+        "threshold_W": 1.5,
+        "event_count": 230,
+        "above_threshold_samples": 257,
+        "sample_fraction_pct": 1.7132191187254182,
+        "median_event_sample_span_ms": 2.0,
+        "max_event_sample_span_ms": 6.0,
+        "median_peak_interval_ms": 103.9999999999992,
+        "most_common_peak_intervals_ms": [
+          [
+            104,
+            64
+          ],
+          [
+            102,
+            47
+          ],
+          [
+            204,
+            43
+          ],
+          [
+            100,
+            17
+          ],
+          [
+            106,
+            8
+          ],
+          [
+            98,
+            7
+          ],
+          [
+            308,
+            4
+          ],
+          [
+            202,
+            4
+          ],
+          [
+            20,
+            4
+          ],
+          [
+            306,
+            3
+          ]
+        ],
+        "phase_concentration_at_102_4_ms": 0.9235492398987198,
+        "phase_concentration_at_100_ms": 0.034299793304909044
+      }
+    },
+    "dominant_spike_train_frequency_5_to_15_Hz": 9.766015598960069,
+    "dominant_spike_train_period_ms": 102.39590443686008,
+    "largest_autocorrelation_80_to_130_ms": [
+      51,
+      0.4359987231548179
+    ]
+  }
+}

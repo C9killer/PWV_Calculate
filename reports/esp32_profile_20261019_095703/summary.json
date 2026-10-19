@@ -1,0 +1,255 @@
+{
+  "capture": {
+    "started_at": "2026-10-19T09:57:03.653805+08:00",
+    "ended_at": "2026-10-19T09:59:03.663568+08:00",
+    "capture_seconds": 120.00046539999312,
+    "port": "COM22",
+    "baud": 921600,
+    "raw_bytes": 972513,
+    "text_log_records": 612,
+    "reset_requested": false,
+    "firmware_flashed": false,
+    "initial_pending_bytes_discarded": true,
+    "input_condition_user_reported": "no_valid_physiological_signal",
+    "input_condition_reported_after_capture": true
+  },
+  "resources_from_initial_device_log": {
+    "model_flash_B": 9341904,
+    "partition_reserved_B": 12582912,
+    "pipeline_psram_B": 85032,
+    "edge_state_included_B": 7808,
+    "queue_payload_B": 16384,
+    "task_stack_reserved_B": 12288
+  },
+  "configured_cpu_mhz_not_independently_measured": 160,
+  "window_count": 120,
+  "status_statistics": {
+    "output_ready": {
+      "windows": 70,
+      "processing_ms": {
+        "count": 70,
+        "mean": 395.2630142857143,
+        "minimum": 390.992,
+        "median": 395.442,
+        "p95": 398.13965,
+        "maximum": 401.232
+      },
+      "last_sample_to_completion_ms": {
+        "count": 70,
+        "mean": 395.34952857142855,
+        "minimum": 391.073,
+        "median": 395.52599999999995,
+        "p95": 398.2266,
+        "maximum": 401.314
+      },
+      "queue_samples": {
+        "count": 70,
+        "mean": 98.34285714285714,
+        "minimum": 97,
+        "median": 98.0,
+        "p95": 99.0,
+        "maximum": 100
+      },
+      "calls_over_1s_observed": 0,
+      "firmware_lifetime_last_n": 209,
+      "firmware_lifetime_last_avg_us": 395545,
+      "firmware_lifetime_last_max_us": 402380,
+      "firmware_lifetime_last_over_hop": 0,
+      "counter_gaps": 0
+    },
+    "physiology_error": {
+      "windows": 11,
+      "processing_ms": {
+        "count": 11,
+        "mean": 360.2101818181818,
+        "minimum": 358.628,
+        "median": 360.089,
+        "p95": 361.8795,
+        "maximum": 362.428
+      },
+      "last_sample_to_completion_ms": {
+        "count": 11,
+        "mean": 360.29563636363633,
+        "minimum": 358.711,
+        "median": 360.174,
+        "p95": 361.962,
+        "maximum": 362.51
+      },
+      "queue_samples": {
+        "count": 11,
+        "mean": 89.54545454545455,
+        "minimum": 89,
+        "median": 90,
+        "p95": 90.0,
+        "maximum": 90
+      },
+      "calls_over_1s_observed": 0,
+      "firmware_lifetime_last_n": 34,
+      "firmware_lifetime_last_avg_us": 359071,
+      "firmware_lifetime_last_max_us": 362740,
+      "firmware_lifetime_last_over_hop": 0,
+      "counter_gaps": 0
+    },
+    "signal_rejected": {
+      "windows": 39,
+      "processing_ms": {
+        "count": 39,
+        "mean": 31.102794871794874,
+        "minimum": 30.825,
+        "median": 31.074,
+        "p95": 31.329600000000003,
+        "maximum": 31.355
+      },
+      "last_sample_to_completion_ms": {
+        "count": 39,
+        "mean": 31.189948717948717,
+        "minimum": 30.907,
+        "median": 31.168,
+        "p95": 31.4122,
+        "maximum": 31.446
+      },
+      "queue_samples": {
+        "count": 39,
+        "mean": 7,
+        "minimum": 7,
+        "median": 7,
+        "p95": 7.0,
+        "maximum": 7
+      },
+      "calls_over_1s_observed": 0,
+      "firmware_lifetime_last_n": 100,
+      "firmware_lifetime_last_avg_us": 31054,
+      "firmware_lifetime_last_max_us": 31366,
+      "firmware_lifetime_last_over_hop": 0,
+      "counter_gaps": 0
+    }
+  },
+  "excluded_incomplete_profile_records": [
+    {
+      "source_line": 1,
+      "missing_fields": [
+        "over_hop",
+        "latency_us",
+        "queue"
+      ],
+      "fields": {
+        "status": "signal_rejected",
+        "n": 47,
+        "sample": 47000,
+        "time_us": 31086,
+        "avg_us": 31004,
+        "max_us": 31269,
+        "device_log_ms": 189063,
+        "source_line": 1
+      }
+    }
+  ],
+  "memory_bounds_bytes": {
+    "stack_peak_since_start_B": {
+      "records": 120,
+      "minimum": 3204,
+      "maximum": 3204
+    },
+    "stack_reserved_B": {
+      "records": 120,
+      "minimum": 12288,
+      "maximum": 12288
+    },
+    "internal_used_peak_bound_B": {
+      "records": 120,
+      "minimum": 206376,
+      "maximum": 207212
+    },
+    "psram_used_peak_bound_B": {
+      "records": 120,
+      "minimum": 120752,
+      "maximum": 120752
+    },
+    "internal_min_free_B": {
+      "records": 120,
+      "minimum": 195663,
+      "maximum": 196499
+    },
+    "psram_min_free_B": {
+      "records": 120,
+      "minimum": 8267856,
+      "maximum": 8267856
+    },
+    "internal_extra_peak_bound_B": {
+      "records": 120,
+      "minimum": 0,
+      "maximum": 480
+    },
+    "psram_extra_peak_bound_B": {
+      "records": 120,
+      "minimum": 28,
+      "maximum": 28
+    }
+  },
+  "known_reserved_payload_subtotal_B": 113704,
+  "sample_discontinuities": [],
+  "drop_warning_lines": [],
+  "restart_indicators_in_capture": [],
+  "rejections": {
+    "signal_rejected:irregular_rhythm": 39,
+    "physiology_error:ok": 11
+  },
+  "pipeline_errors": [
+    {
+      "source_line": 66,
+      "log": "E (241400) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 102,
+      "log": "E (248399) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 173,
+      "log": "E (262401) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 184,
+      "log": "E (264399) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 215,
+      "log": "E (270401) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 321,
+      "log": "E (291401) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 332,
+      "log": "E (293399) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 383,
+      "log": "E (303400) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 434,
+      "log": "E (313400) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 475,
+      "log": "E (321403) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    },
+    {
+      "source_line": 496,
+      "log": "E (325401) WK_RT: pipeline error: ESP_ERR_INVALID_ARG"
+    }
+  ],
+  "source_sha256": {
+    "serial_raw.bin": "6d7d981062cac36911157c03c5f9afdb264d1b67539ecd005cc7050eae2e3cf0",
+    "initial_probe_raw.bin": "7a18ef9d9ffea92600e017591f2b368299f526780ecad60ffa6c347598937560"
+  },
+  "limitations": [
+    "Processing time includes snapshot, feature extraction, inference, physiological calculation and preemption; excludes prior hop filtering, logs and publication.",
+    "Latency is last submitted sample to computation completion, excluding five-second signal acquisition, ADC conversion and transmission.",
+    "Heap bounds are system-wide and include other tasks; static RAM outside heap and MMU/cache physical storage are not algorithm-exclusive allocations.",
+    "Resource metadata came from initially buffered startup logs; CPU frequency comes from sdkconfig, not independent on-device measurement.",
+    "No firmware flash/reset requested; first startup window and cold-start performance were not measured.",
+    "No isolated per-model timing, CPU utilization or electrical power was measured."
+  ]
+}

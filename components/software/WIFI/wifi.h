@@ -4,6 +4,10 @@
 #include <stddef.h>
 #include "esp_wifi.h"
 
+/* Keep disabled for power measurements without radio activity.
+ * Set to 1 to restore SoftAP startup and protocol forwarding over Wi-Fi. */
+#define ENABLE_WIFI 1
+
 #define WIFI_DATA_PORT 3333
 
 void wifi_scan(void);

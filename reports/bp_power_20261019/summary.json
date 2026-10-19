@@ -1,0 +1,273 @@
+{
+  "user_confirmed_only_bp_calculation_switch_changed": true,
+  "primary_interval_s": [
+    0,
+    30
+  ],
+  "sources": {
+    "off": {
+      "path": "C:\\Users\\T\\Desktop\\未加载血压计算数据.csv",
+      "filename": "未加载血压计算数据.csv",
+      "encoding": "gb18030",
+      "sha256": "e6f01efc3ffd8bd39ea1cb6941a5a0465226d8b761e7c313de64366d786db99b",
+      "rows": 15420,
+      "start_s": 0.0,
+      "end_s": 30.838,
+      "duration_s": 30.838,
+      "dt_ms_counts": {
+        "2.0": 15419
+      },
+      "missing_or_nonfinite_rows": 0,
+      "max_abs_power_minus_UI_W": 5.119999999969593e-06,
+      "energy_counter_decreases": 0
+    },
+    "on": {
+      "path": "C:\\Users\\T\\Desktop\\运行血压数据.csv",
+      "filename": "运行血压数据.csv",
+      "encoding": "gb18030",
+      "sha256": "e9948a6311d0375298b4b9023eb2aee50ecd86f959d8a95be9096e15588ee6f3",
+      "rows": 16492,
+      "start_s": 0.0,
+      "end_s": 32.982,
+      "duration_s": 32.982,
+      "dt_ms_counts": {
+        "2.0": 16491
+      },
+      "missing_or_nonfinite_rows": 0,
+      "max_abs_power_minus_UI_W": 5.099999999869098e-06,
+      "energy_counter_decreases": 0
+    }
+  },
+  "primary": {
+    "off": {
+      "start_s": 0,
+      "end_s": 30,
+      "duration_s": 30,
+      "sample_count": 15001,
+      "mean_power_W": 0.6712672258999943,
+      "arithmetic_mean_power_W": 0.6713170201319912,
+      "mean_voltage_V": 4.908397133333259,
+      "mean_current_A": 0.1368346466666696,
+      "min_power_W": 0.610941,
+      "max_power_W": 1.87663,
+      "median_power_W": 0.639416,
+      "p95_power_W": 0.683829,
+      "std_power_W_descriptive": 0.1557684382903303,
+      "energy_J": 20.13801677699983,
+      "energy_mWh": 5.593893549166619,
+      "instrument_cumulative_energy_delta_J": 20.138885996400003,
+      "energy_integration_minus_counter_J": -0.0008692194001724829,
+      "energy_integration_minus_counter_pct": -0.0043161245380100135
+    },
+    "on": {
+      "start_s": 0,
+      "end_s": 30,
+      "duration_s": 30,
+      "sample_count": 15001,
+      "mean_power_W": 0.6837380101333388,
+      "arithmetic_mean_power_W": 0.6837348597426838,
+      "mean_voltage_V": 4.907077546666519,
+      "mean_current_A": 0.13941739333333555,
+      "min_power_W": 0.613846,
+      "max_power_W": 1.94474,
+      "median_power_W": 0.648915,
+      "p95_power_W": 0.729225,
+      "std_power_W_descriptive": 0.15979118336650017,
+      "energy_J": 20.512140304000162,
+      "energy_mWh": 5.697816751111156,
+      "instrument_cumulative_energy_delta_J": 20.5121403396,
+      "energy_integration_minus_counter_J": -3.5599835968014304e-08,
+      "energy_integration_minus_counter_pct": -1.73554955156418e-07
+    }
+  },
+  "difference": {
+    "incremental_mean_power_W": 0.012470784233344467,
+    "incremental_mean_power_mW": 12.470784233344467,
+    "relative_power_increase_pct": 1.8577972753882621,
+    "incremental_energy_J": 0.37412352700033225,
+    "incremental_energy_mWh": 0.10392320194453664,
+    "incremental_mean_current_mA": 2.5827466666659413
+  },
+  "full_record": {
+    "off": {
+      "start_s": 0.0,
+      "end_s": 30.838,
+      "duration_s": 30.838,
+      "sample_count": 15420,
+      "mean_power_W": 0.6724233513846501,
+      "arithmetic_mean_power_W": 0.6724324725680934,
+      "mean_voltage_V": 4.90829983786232,
+      "mean_current_A": 0.1370762857513484,
+      "min_power_W": 0.610941,
+      "max_power_W": 1.87663,
+      "median_power_W": 0.639416,
+      "p95_power_W": 0.6843539499999998,
+      "std_power_W_descriptive": 0.15935645113056202,
+      "energy_J": 20.736191309999843,
+      "energy_mWh": 5.7600531416666225,
+      "instrument_cumulative_energy_delta_J": 20.7358379964,
+      "energy_integration_minus_counter_J": 0.0003533135998416981,
+      "energy_integration_minus_counter_pct": 0.0017038790518282296
+    },
+    "on": {
+      "start_s": 0.0,
+      "end_s": 32.982,
+      "duration_s": 32.982,
+      "sample_count": 16492,
+      "mean_power_W": 0.6849817111758003,
+      "arithmetic_mean_power_W": 0.6849786062333253,
+      "mean_voltage_V": 4.906949026741713,
+      "mean_current_A": 0.13967508641077125,
+      "min_power_W": 0.613846,
+      "max_power_W": 1.94474,
+      "median_power_W": 0.649554,
+      "p95_power_W": 0.7308345499999999,
+      "std_power_W_descriptive": 0.15983964519066018,
+      "energy_J": 22.592066798000246,
+      "energy_mWh": 6.275574110555624,
+      "instrument_cumulative_energy_delta_J": 22.5920763396,
+      "energy_integration_minus_counter_J": -9.54159975208313e-06,
+      "energy_integration_minus_counter_pct": -4.223427545417044e-05
+    }
+  },
+  "five_second_blocks": [
+    {
+      "start_s": 0,
+      "end_s": 5,
+      "off_mean_W": 0.6729449825999992,
+      "on_mean_W": 0.6733673746000006,
+      "incremental_mean_power_W": 0.00042239200000138144,
+      "incremental_mean_power_mW": 0.42239200000138144,
+      "relative_power_increase_pct": 0.06276768694661872,
+      "incremental_energy_J": 0.002111960000006796,
+      "incremental_energy_mWh": 0.0005866555555574804,
+      "incremental_mean_current_mA": 0.1217200000003249
+    },
+    {
+      "start_s": 5,
+      "end_s": 10,
+      "off_mean_W": 0.6679794615999987,
+      "on_mean_W": 0.6864166463999977,
+      "incremental_mean_power_W": 0.018437184799999007,
+      "incremental_mean_power_mW": 18.437184799999006,
+      "relative_power_increase_pct": 2.760142468428106,
+      "incremental_energy_J": 0.09218592399999492,
+      "incremental_energy_mWh": 0.0256072011111097,
+      "incremental_mean_current_mA": 3.825640000000158
+    },
+    {
+      "start_s": 10,
+      "end_s": 15,
+      "off_mean_W": 0.6694823100000005,
+      "on_mean_W": 0.6789346043999989,
+      "incremental_mean_power_W": 0.009452294399998395,
+      "incremental_mean_power_mW": 9.452294399998395,
+      "relative_power_increase_pct": 1.4118811294653089,
+      "incremental_energy_J": 0.0472614719999922,
+      "incremental_energy_mWh": 0.013128186666664599,
+      "incremental_mean_current_mA": 1.989279999999899
+    },
+    {
+      "start_s": 15,
+      "end_s": 20,
+      "off_mean_W": 0.6729838018000016,
+      "on_mean_W": 0.6941393550000013,
+      "incremental_mean_power_W": 0.021155553199999733,
+      "incremental_mean_power_mW": 21.155553199999733,
+      "relative_power_increase_pct": 3.143545675752657,
+      "incremental_energy_J": 0.10577776599999833,
+      "incremental_energy_mWh": 0.029382712777777265,
+      "incremental_mean_current_mA": 4.383200000000532
+    },
+    {
+      "start_s": 20,
+      "end_s": 25,
+      "off_mean_W": 0.6692618918,
+      "on_mean_W": 0.6779971185999999,
+      "incremental_mean_power_W": 0.00873522679999994,
+      "incremental_mean_power_mW": 8.73522679999994,
+      "relative_power_increase_pct": 1.3052030762585654,
+      "incremental_energy_J": 0.04367613400000003,
+      "incremental_energy_mWh": 0.012132259444444404,
+      "incremental_mean_current_mA": 1.7641399999995255
+    },
+    {
+      "start_s": 25,
+      "end_s": 30,
+      "off_mean_W": 0.6749509076000006,
+      "on_mean_W": 0.6915729618000023,
+      "incremental_mean_power_W": 0.016622054200001624,
+      "incremental_mean_power_mW": 16.622054200001624,
+      "relative_power_increase_pct": 2.462705659454034,
+      "incremental_energy_J": 0.08311027100000823,
+      "incremental_energy_mWh": 0.02308618638889115,
+      "incremental_mean_current_mA": 3.412500000000096
+    }
+  ],
+  "sensitivity_5_to_30s": {
+    "conditions": {
+      "off": {
+        "start_s": 5,
+        "end_s": 30,
+        "duration_s": 25,
+        "sample_count": 12501,
+        "mean_power_W": 0.6709316745599988,
+        "arithmetic_mean_power_W": 0.6709785898728102,
+        "mean_voltage_V": 4.908223031999912,
+        "mean_current_A": 0.13677004400000267,
+        "min_power_W": 0.610941,
+        "max_power_W": 1.87663,
+        "median_power_W": 0.639259,
+        "p95_power_W": 0.683829,
+        "std_power_W_descriptive": 0.1548358841014123,
+        "energy_J": 16.77329186399997,
+        "energy_mWh": 4.659247739999992,
+        "instrument_cumulative_energy_delta_J": 16.774484400000002,
+        "energy_integration_minus_counter_J": -0.0011925360000333285,
+        "energy_integration_minus_counter_pct": -0.007109225962458365
+      },
+      "on": {
+        "start_s": 5,
+        "end_s": 30,
+        "duration_s": 25,
+        "sample_count": 12501,
+        "mean_power_W": 0.6858121372400001,
+        "arithmetic_mean_power_W": 0.6858087078633709,
+        "mean_voltage_V": 4.906901615999851,
+        "mean_current_A": 0.13984499600000283,
+        "min_power_W": 0.614121,
+        "max_power_W": 1.94474,
+        "median_power_W": 0.649245,
+        "p95_power_W": 0.731499,
+        "std_power_W_descriptive": 0.16184258367236465,
+        "energy_J": 17.145303431000002,
+        "energy_mWh": 4.762584286388889,
+        "instrument_cumulative_energy_delta_J": 17.1452916,
+        "energy_integration_minus_counter_J": 1.1831000001905068e-05,
+        "energy_integration_minus_counter_pct": 6.900436736756969e-05
+      }
+    },
+    "difference": {
+      "incremental_mean_power_W": 0.014880462680001316,
+      "incremental_mean_power_mW": 14.880462680001315,
+      "relative_power_increase_pct": 2.217880485335555,
+      "incremental_energy_J": 0.37201156700003324,
+      "incremental_energy_mWh": 0.10333654638889733,
+      "incremental_mean_current_mA": 3.0749520000001587
+    }
+  },
+  "methods": {
+    "power_average": "Trapezoidal time integral of recorded power divided by duration",
+    "energy": "Integral of recorded power (W) over actual timestamps (s)",
+    "primary_duration": "Identical first 30.000 s from both independent recordings",
+    "counter_check": "Difference of interpolated cumulative Wh values times 3600",
+    "delta": "BP enabled minus disabled; not a pointwise time-synchronized subtraction"
+  },
+  "limitations": [
+    "One recording per condition; high-rate samples are not independent replicate experiments.",
+    "CSV timestamp spacing is not proof of instrument measurement bandwidth or accuracy.",
+    "Measurement boundary is the power meter input/output location; not isolated MCU core or model-only electrical power.",
+    "Includes feature extraction and BP pipeline plus any downstream effects of enabling it.",
+    "No simultaneous inference logs/counts; per-successful-prediction energy cannot be measured from these files."
+  ]
+}

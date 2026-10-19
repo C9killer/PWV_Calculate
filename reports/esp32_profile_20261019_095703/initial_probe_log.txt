@@ -1,0 +1,104 @@
+I (191) esp_image: segment 4: paddr=000dcf94 vaddr=4037c908 sizeI (847) PROTOCOL: ready: identical 10-byte float32 frames via UART + Wi-Fi TCP
+I (849) IIC: I2C0 ready: SCL=GPIO4, SDA=GPIO5, device clock=100000 Hz
+I (851) IIC: Handle registered: address=0x34, clock=100000 Hz (not proof of ACK)
+I (852) AXP2101: Trying direct REG00 read at 100000 Hz
+I (853) AXP2101: Communication established at 100000 Hz: REG00=0x20
+I (859) AXP2101: Cell/button charging disabled; TS current off; CHGLED off (verified)
+I (861) PWR: Status=20/15, power-on=04, power-off=00
+I (879) PWR: DCDC1=3300mV, ALDO1=3300mV, ALDO2=1600mV
+I (879) PWR: Key: on=512ms, hardware off=6s; no software key handler
+I (886) WK_MODEL: WKESP1 ready: 8 models, 9341904 bytes in flash partition
+I (888) WK_RT: RESOURCE model_flash_B=9341904 partition_reserved_B=12582912
+I (889) WK_RT: RESOURCE pipeline_psram_B=85032 edge_state_included_B=7808 queue_payload_B=16384 task_stack_reserved_B=12288
+I (890) WK_RT: ready: AIN0=ECG AIN1=finger PPG AIN2=wrist PPG; 250 Hz acquisition -> 250 Hz model
+I (994) ADS131: SPI2 ready: CS=10 MOSI=11 SCK=12 MISO=13, mode=1, 1000000 Hz
+I (995) ADS131: SPI transport ready; acquisition setup will hardware-reset and configure ADC
+I (1000) ADS131: Configured addr=0x03 value=0x0019
+I (1001) ADS131: Configured addr=0x02 value=0x0110
+I (1003) ADS131: Configured addr=0x04 value=0x0000
+I (1004) ADS131: Configured addr=0x06 value=0x0600
+I (1006) ADS131: Configured addr=0x09 value=0x0000
+I (1007) ADS131: Configured addr=0x0E value=0x0000
+I (1009) ADS131: Configured addr=0x13 value=0x0000
+I (1010) ADS131: Configured addr=0x03 value=0x0719
+I (1011) ADS131: AIN0..2 synchronous: CLKIN=4096000 Hz, OSR=8192, 250 SPS, gain=1
+I (1014) ACQ: Started 250 Hz: AIN0..2, 1250 samples/window, protocol streaming
+I (1015) main_task: Returned from app_main()
+I (174427) WK_RT: PROFILE status=output_ready n=117 sample=43250 time_us=395443 avg_us=395947 max_us=402380 over_hop=0 latency_us=395524 queue=98
+I (174430) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (174431) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (174433) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (174435) WK_RT: BP SBP=145.97 DBP=70.91 Q=0.44 process=395443us end_to_end=395524us (396 ticks, 396ms) ref=0
+I (175063) WK_RT: PROFILE status=signal_rejected n=37 sample=43500 time_us=30868 avg_us=30984 max_us=31269 over_hop=0 latency_us=30968 queue=7
+I (175065) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (175067) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (175068) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (175070) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=30868us
+I (176063) WK_RT: PROFILE status=signal_rejected n=38 sample=43750 time_us=31222 avg_us=30990 max_us=31269 over_hop=0 latency_us=31302 queue=7
+I (176066) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (176067) WK_RT: RAM system_window internal_used_peak_bound_B=206392 psram_used_peak_bound_B=120752
+I (176068) WK_RT: RAM system_window internal_min_free_B=196483 psram_min_free_B=8267856 internal_extra_peak_bound_B=16 psram_extra_peak_bound_B=28
+W (176071) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=31222us
+I (177063) WK_RT: PROFILE status=signal_rejected n=39 sample=44000 time_us=31095 avg_us=30993 max_us=31269 over_hop=0 latency_us=31179 queue=7
+I (177065) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (177067) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (177068) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (177071) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=31095us
+I (178063) WK_RT: PROFILE status=signal_rejected n=40 sample=44250 time_us=31127 avg_us=30996 max_us=31269 over_hop=0 latency_us=31218 queue=7
+I (178066) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (178067) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (178068) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (178070) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=31127us
+I (179390) WK_RT: PROFILE status=physiology_error n=17 sample=44500 time_us=358153 avg_us=358208 max_us=362740 over_hop=0 latency_us=358237 queue=89
+I (179393) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (179394) WK_RT: RAM system_window internal_used_peak_bound_B=206840 psram_used_peak_bound_B=120752
+I (179395) WK_RT: RAM system_window internal_min_free_B=196035 psram_min_free_B=8267856 internal_extra_peak_bound_B=464 psram_extra_peak_bound_B=28
+E (179397) WK_RT: pipeline error: ESP_ERR_INVALID_ARG
+W (179398) WK_RT: window rejected: physiology_error (ok), process=358153us
+I (180063) WK_RT: PROFILE status=signal_rejected n=41 sample=44750 time_us=31238 avg_us=31002 max_us=31269 over_hop=0 latency_us=31322 queue=7
+I (180066) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (180067) WK_RT: RAM system_window internal_used_peak_bound_B=206392 psram_used_peak_bound_B=120752
+I (180068) WK_RT: RAM system_window internal_min_free_B=196483 psram_min_free_B=8267856 internal_extra_peak_bound_B=16 psram_extra_peak_bound_B=28
+W (180071) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=31238us
+I (181392) WK_RT: PROFILE status=physiology_error n=18 sample=45000 time_us=360501 avg_us=358335 max_us=362740 over_hop=0 latency_us=360579 queue=90
+I (181395) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (181396) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (181398) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+E (181400) WK_RT: pipeline error: ESP_ERR_INVALID_ARG
+W (181401) WK_RT: window rejected: physiology_error (ok), process=360501us
+I (182427) WK_RT: PROFILE status=output_ready n=118 sample=45250 time_us=395236 avg_us=395941 max_us=402380 over_hop=0 latency_us=395316 queue=98
+I (182430) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (182431) WK_RT: RAM system_window internal_used_peak_bound_B=206484 psram_used_peak_bound_B=120752
+I (182432) WK_RT: RAM system_window internal_min_free_B=196391 psram_min_free_B=8267856 internal_extra_peak_bound_B=108 psram_extra_peak_bound_B=28
+I (182435) WK_RT: BP SBP=144.87 DBP=71.82 Q=0.44 process=395236us end_to_end=395316us (395 ticks, 395ms) ref=0
+I (183063) WK_RT: PROFILE status=signal_rejected n=42 sample=45500 time_us=30812 avg_us=30998 max_us=31269 over_hop=0 latency_us=30899 queue=7
+I (183065) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (183066) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (183068) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (183070) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=30812us
+I (184390) WK_RT: PROFILE status=physiology_error n=19 sample=45750 time_us=358109 avg_us=358323 max_us=362740 over_hop=0 latency_us=358191 queue=89
+I (184393) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (184394) WK_RT: RAM system_window internal_used_peak_bound_B=206468 psram_used_peak_bound_B=120752
+I (184395) WK_RT: RAM system_window internal_min_free_B=196407 psram_min_free_B=8267856 internal_extra_peak_bound_B=92 psram_extra_peak_bound_B=28
+E (184397) WK_RT: pipeline error: ESP_ERR_INVALID_ARG
+W (184398) WK_RT: window rejected: physiology_error (ok), process=358109us
+I (185063) WK_RT: PROFILE status=signal_rejected n=43 sample=46000 time_us=30927 avg_us=30996 max_us=31269 over_hop=0 latency_us=31011 queue=7
+I (185066) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (185067) WK_RT: RAM system_window internal_used_peak_bound_B=206392 psram_used_peak_bound_B=120752
+I (185068) WK_RT: RAM system_window internal_min_free_B=196483 psram_min_free_B=8267856 internal_extra_peak_bound_B=16 psram_extra_peak_bound_B=28
+W (185070) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=30927us
+I (186063) WK_RT: PROFILE status=signal_rejected n=44 sample=46250 time_us=30998 avg_us=30996 max_us=31269 over_hop=0 latency_us=31078 queue=7
+I (186065) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (186067) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (186068) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (186071) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=30998us
+I (187063) WK_RT: PROFILE status=signal_rejected n=45 sample=46500 time_us=31073 avg_us=30998 max_us=31269 over_hop=0 latency_us=31155 queue=7
+I (187066) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (187067) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (187068) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (187070) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=31073us
+I (188063) WK_RT: PROFILE status=signal_rejected n=46 sample=46750 time_us=31212 avg_us=31002 max_us=31269 over_hop=0 latency_us=31340 queue=7
+I (188066) WK_RT: RAM stack_peak_since_start_B=3204 stack_reserved_B=12288
+I (188067) WK_RT: RAM system_window internal_used_peak_bound_B=206376 psram_used_peak_bound_B=120752
+I (188068) WK_RT: RAM system_window internal_min_free_B=196499 psram_min_free_B=8267856 internal_extra_peak_bound_B=0 psram_extra_peak_bound_B=28
+W (188071) WK_RT: window rejected: signal_rejected (irregular_rhythm), process=31212us

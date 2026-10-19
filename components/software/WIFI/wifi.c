@@ -221,6 +221,8 @@ void wifi_sta_init(void)
 
 #define WIFI_TX_QUEUE_LENGTH 64
 #define WIFI_TX_MESSAGE_SIZE 48
+/* Wi-Fi driver tasks are configured for CPU0; keep socket egress co-located. */
+#define WIFI_IO_CORE 0
 
 typedef struct {
     size_t length;
@@ -408,7 +410,8 @@ void wifi_init_softap(void)//初始化esp为热点
         ESP_LOGE(TAG, "Failed to create Wi-Fi transmit queue");
         return;
     }
-    if (xTaskCreate(wifi_tcp_server, "wifi_tcp", 4096, NULL, 5, NULL) != pdPASS) {
+    if (xTaskCreatePinnedToCore(wifi_tcp_server, "wifi_tcp", 4096, NULL, 5,
+                                NULL, WIFI_IO_CORE) != pdPASS) {
         ESP_LOGE(TAG, "Failed to create Wi-Fi TCP server task");
         vQueueDelete(wifi_tx_queue);
         wifi_tx_queue = NULL;

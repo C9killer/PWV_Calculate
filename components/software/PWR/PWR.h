@@ -13,6 +13,7 @@
 #define PWR_KEY_HARDWARE_OFF_MS 6000
 
 /* Call once from app_main before initializing peripherals.
+ * Disables cell/button charging and TS sensing, and forces CHGLED off.
  * DCDC1 must already power the ESP32 at a safe voltage at cold boot.
  * Runtime settings do not program the PMIC's factory/EFUSE defaults.
  * All PWR/AXP2101 calls must be serialized by the application, in task context.

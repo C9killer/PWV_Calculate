@@ -15,6 +15,7 @@ esp_err_t PWR_Init(void)
         return ESP_OK;
     }
     ESP_RETURN_ON_ERROR(AXP2101_Init(), TAG, "AXP2101 communication failed");
+    ESP_RETURN_ON_ERROR(AXP2101_DisableCharging(), TAG, "Disable charging failed");
 
     AXP2101_Status_t status;
     ESP_RETURN_ON_ERROR(AXP2101_ReadStatus(&status), TAG, "Read power status failed");

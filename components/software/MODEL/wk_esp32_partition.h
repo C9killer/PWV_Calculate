@@ -24,6 +24,7 @@ typedef struct {
     const esp_partition_t *partition;
     uint32_t model_count;
     uint32_t base_feature_count;
+    uint32_t package_bytes; /* Actual package length, not reserved partition size. */
     uint8_t descriptors[WK_FLASH_MAX_MODELS][WK_FLASH_DESCRIPTOR_BYTES];
 } wk_flash_models_t;
 

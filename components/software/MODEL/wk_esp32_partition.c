@@ -60,6 +60,7 @@ esp_err_t wk_flash_models_init(wk_flash_models_t *context)
     if (error != ESP_OK) return error;
     context->model_count = header.model_count;
     context->base_feature_count = header.base_feature_count;
+    context->package_bytes = header.total_bytes;
     if (context->base_feature_count != WK_COMPACT_BASE_FEATURE_COUNT)
         return ESP_ERR_INVALID_RESPONSE;
     for (id = 0; id < context->model_count; ++id) {

@@ -1,0 +1,6 @@
+{
+  "port": "COM22",
+  "capture_started": false,
+  "error": "Serial port open returned PermissionError(13), WinError 5: access denied.",
+  "resolution": "User closed serial monitor; a separate capture was started in esp32_profile_20261019_101910."
+}

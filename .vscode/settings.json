@@ -25,7 +25,6 @@
   "idf.openOcdConfigs": [
     "board/esp32s3-builtin.cfg"
   ],
-  "idf.portWin": "COM22",
   "idf.currentSetup": "D:\\ESP\\.espressif\\v6.1\\esp-idf",
   "idf.customExtraVars": {
     "IDF_TARGET": "esp32s3"
@@ -37,5 +36,6 @@
     "--query-driver=**",
     "--compile-commands-dir=${workspaceFolder}/build"
   ],
-  "idf.flashType": "UART"
+  "idf.flashType": "UART",
+  "idf.port": "COM22"
 }

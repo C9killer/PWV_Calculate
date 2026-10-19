@@ -24,6 +24,11 @@ typedef struct {
  * Init only establishes communication; it does not change any power outputs.
  */
 esp_err_t AXP2101_Init(void);
+/* Runtime policy for this board's unconnected TS pin: disable both chargers,
+ * stop TS current/charger temperature sensing, and force CHGLED off.
+ * Preserves system power, battery detection, gauge and thermal shutdown.
+ */
+esp_err_t AXP2101_DisableCharging(void);
 esp_err_t AXP2101_ReadStatus(AXP2101_Status_t *status);
 /* Exact millivolts only. Unsupported values (including ALDO2=1650) are rejected. */
 esp_err_t AXP2101_SetVoltage(AXP2101_Output_t output, uint16_t millivolts);
